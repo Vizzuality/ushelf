@@ -23,3 +23,16 @@ u.reload
 end
 
 u.roles << r
+
+
+# Feature attributes
+attributes = <<-ATTRIBUTES
+ecs_id:string
+state:string
+ref:string
+status:string
+submission_date:string
+area:string
+ATTRIBUTES
+
+RefinerySetting.set(:feature_attributes, attributes)

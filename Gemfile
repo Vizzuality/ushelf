@@ -29,3 +29,5 @@ gem 'refinerycms-galleries',    '= 0.4',     :require => 'galleries',        :gi
 gem 'refinerycms-features',     '= 0.2',     :require => 'features',         :git => 'git://github.com/Vizzuality/refinerycms-features.git'
 
 # END REFINERY CMS ============================================================
+
+gem 'csv-mapper'

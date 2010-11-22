@@ -2,7 +2,7 @@ development:
   adapter: postgresql
   template: template_postgis
   encoding: unicode
-  database: geoportal_development
+  database: ushelf_development
   username: postgres
   password:
 
@@ -10,6 +10,6 @@ test:
   adapter: postgresql
   template: template_postgis
   encoding: unicode
-  database: geoportal_test
+  database: ushelf_test
   username: postgres
   password:

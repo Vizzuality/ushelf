@@ -20,13 +20,13 @@ GIT
 
 GIT
   remote: git://github.com/Vizzuality/refinerycms-features.git
-  revision: 6a52d158694f2f21e86ebe7ae9a72ec0b99f81a1
+  revision: 9866206bfb8241d71cfbd3b9419ebf27867c5089
   specs:
     refinerycms-features (0.2)
 
 GIT
   remote: git://github.com/Vizzuality/refinerycms-galleries.git
-  revision: c3ba402ec0cf28788a1441bcf1b8478535fb64e3
+  revision: ba04f6c6eb841173a4b0a5b1c5f3d695846f4c5a
   specs:
     refinerycms-galleries (0.4)
 
@@ -40,12 +40,12 @@ GEM
   remote: http://rubygems.org/
   specs:
     abstract (1.0.0)
-    actionmailer (3.0.0)
-      actionpack (= 3.0.0)
+    actionmailer (3.0.1)
+      actionpack (= 3.0.1)
       mail (~> 2.2.5)
-    actionpack (3.0.0)
-      activemodel (= 3.0.0)
-      activesupport (= 3.0.0)
+    actionpack (3.0.1)
+      activemodel (= 3.0.1)
+      activesupport (= 3.0.1)
       builder (~> 2.1.2)
       erubis (~> 2.6.6)
       i18n (~> 0.4.1)
@@ -53,19 +53,19 @@ GEM
       rack-mount (~> 0.6.12)
       rack-test (~> 0.5.4)
       tzinfo (~> 0.3.23)
-    activemodel (3.0.0)
-      activesupport (= 3.0.0)
+    activemodel (3.0.1)
+      activesupport (= 3.0.1)
       builder (~> 2.1.2)
       i18n (~> 0.4.1)
-    activerecord (3.0.0)
-      activemodel (= 3.0.0)
-      activesupport (= 3.0.0)
+    activerecord (3.0.1)
+      activemodel (= 3.0.1)
+      activesupport (= 3.0.1)
       arel (~> 1.0.0)
       tzinfo (~> 0.3.23)
-    activeresource (3.0.0)
-      activemodel (= 3.0.0)
-      activesupport (= 3.0.0)
-    activesupport (3.0.0)
+    activeresource (3.0.1)
+      activemodel (= 3.0.1)
+      activesupport (= 3.0.1)
+    activesupport (3.0.1)
     acts_as_indexed (0.6.6)
     arel (1.0.1)
       activesupport (~> 3.0.0)
@@ -81,21 +81,25 @@ GEM
       net-ssh-gateway (>= 1.0.0)
     capistrano-ext (1.2.1)
       capistrano (>= 1.0.0)
-    columnize (0.3.1)
-    dragonfly (0.7.6)
+    columnize (0.3.2)
+    csv-mapper (0.5.1)
+      fastercsv
+    dragonfly (0.7.7)
       rack
     erubis (2.6.6)
       abstract (>= 1.0.0)
+    fastercsv (1.5.3)
     filters_spam (0.3)
     friendly_id (3.1.7)
       babosa (~> 0.2.0)
     highline (1.6.1)
-    i18n (0.4.1)
+    i18n (0.4.2)
     linecache (0.43)
-    mail (2.2.7)
+    mail (2.2.10)
       activesupport (>= 2.3.6)
-      mime-types
-      treetop (>= 1.4.5)
+      i18n (~> 0.4.1)
+      mime-types (~> 1.16)
+      treetop (~> 1.4.8)
     mime-types (1.16)
     moretea-awesome_nested_set (1.4.3.1)
       activerecord (~> 3.0.0)
@@ -116,17 +120,17 @@ GEM
       rack (>= 1.0.0)
     rack-test (0.5.6)
       rack (>= 1.0)
-    rails (3.0.0)
-      actionmailer (= 3.0.0)
-      actionpack (= 3.0.0)
-      activerecord (= 3.0.0)
-      activeresource (= 3.0.0)
-      activesupport (= 3.0.0)
+    rails (3.0.1)
+      actionmailer (= 3.0.1)
+      actionpack (= 3.0.1)
+      activerecord (= 3.0.1)
+      activeresource (= 3.0.1)
+      activesupport (= 3.0.1)
       bundler (~> 1.0.0)
-      railties (= 3.0.0)
-    railties (3.0.0)
-      actionpack (= 3.0.0)
-      activesupport (= 3.0.0)
+      railties (= 3.0.1)
+    railties (3.0.1)
+      actionpack (= 3.0.1)
+      activesupport (= 3.0.1)
       rake (>= 0.8.4)
       thor (~> 0.14.0)
     rake (0.8.7)
@@ -149,13 +153,13 @@ GEM
     rmagick (2.12.2)
     routing-filter (0.1.7)
       actionpack
-    ruby-debug (0.10.3)
+    ruby-debug (0.10.4)
       columnize (>= 0.1)
-      ruby-debug-base (~> 0.10.3.0)
-    ruby-debug-base (0.10.3)
+      ruby-debug-base (~> 0.10.4.0)
+    ruby-debug-base (0.10.4)
       linecache (>= 0.3)
-    thor (0.14.3)
-    treetop (1.4.8)
+    thor (0.14.6)
+    treetop (1.4.9)
       polyglot (>= 0.3.1)
     truncate_html (0.4.0)
     tzinfo (0.3.23)
@@ -167,10 +171,12 @@ PLATFORMS
 DEPENDENCIES
   capistrano
   capistrano-ext
+  csv-mapper
+  dragonfly (= 0.7.7)
   nofxx-georuby
   pg (= 0.9.0)
   ppe-postgis-adapter!
-  rails (= 3.0.0)
+  rails (= 3.0.1)
   rails-footnotes!
   refinerycms (= 0.9.8.5)
   refinerycms-blog (~> 1.0.rc12)!

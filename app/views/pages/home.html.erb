@@ -1,3 +1,83 @@
-Home Page redefined.
+<%= stylesheet_link_tag("layout") %>
 
-Remove this file if you want to use the page from the Refinery CMS.
+<div id="layout_header">
+  <div id="content">
+    <div id="header">
+      <h1 class="title">Unlimited Shelf</h1>
+      <ul class="menu">
+        <li><a href="/home">Home</a></li>
+        <li><a href="/about">Learn More</a></li>
+        <li><a href="/explore">Explore</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/galleries">Media</a></li>
+        <li><a href="/event">Events</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="layout">
+  <div id="content">
+    <div id="content_inside">
+
+      <div id="home_info">
+        <ul>
+          <li class="">
+            <p>The Unlimited Shelf follows the world’s costal states in establishing the limits of their maritime jurisdiction.</p>
+          </li>
+          <li class="">
+            <p>The aim is to assist developing states in establishing the outer limits of their continental shelves, through submissions.</p>
+          </li>
+          <li class="last">
+            <p>This will lead to the wise use of ocean resources and help on the establishment of marine protected areas.</p>
+          </li>
+        </ul>
+      </div>
+
+  <div id="home_search">
+    <div class="left">
+      <form action="/explore" method="get">
+        <h4>Search for states</h4>
+        <input type="text" value="States, Country, ..." name="state_or_country"/>
+        <input type="submit" value="Search" />
+      </form>
+    </div>
+    <div class="right">
+      <h4>Or</h4>
+      <span class="map_explore"></span>
+    </div>
+  </div>
+
+      <div id="home_extras">
+        <ul>
+          <li class="">
+            <h2>FROM THE GALLERY</h2>
+            <span class="home_gallery"></span>
+            <p class="text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
+            <p class="more">More galleries ></p>
+          </li>
+          <li class="">
+            <h2>FROM THE GALLERY<h2>
+              <h4>23/10/2010</h4>
+              <p class="title">Lorem ipsum dolor sit amet</p>
+              <p class="text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
+              <p class="more">More posts ></p>
+            </li>
+            <li class="last">
+              <h2>NEXT EVENTS<h2>
+                <h4>23/10/2010</h4>
+                <p class="title">Lorem ipsum dolor sit amet</p>
+                <p class="text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
+                <p class="more">More events ></p>
+              </li>
+            </ul>
+          </div>
+
+    </div> <!-- End content_inside -->
+  </div> <!-- End content -->
+</div> <!-- End layout -->
+
+<div id="footer"></div>
+
+
+

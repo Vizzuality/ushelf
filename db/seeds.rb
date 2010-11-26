@@ -34,6 +34,7 @@ status:string
 submission_date:string
 area:string
 limit:string
+description:string
 firstname:string
 lastname:string
 address:string

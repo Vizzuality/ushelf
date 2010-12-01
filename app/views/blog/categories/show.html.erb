@@ -1,17 +1,73 @@
 <% content_for :body_content_left do %>
-  <% if @category.posts.any? %>
-  <ul id="blog_posts">
-    <%= render :partial => "/blog/shared/post", :collection => @category.posts %>
-  </ul>
-  <% else %>
-    <p>
-      <%= t('.no_posts') %>
-    </p>
-  <% end %>
+<div class="body_content_left">
+  <div class="post_content">
+    <div class="top_posts"></div>
+    <div class="middle_posts">
+      <div class="head_posts">
+        <div class="left">
+          <h1>Latest news</h1>
+        </div>
+        <div class="right">
+          <p class="feed"><a href="<%= blog_rss_feed_url %>">subscribe to our blog</a></p>
+        </div>
+        <span class="line"></span>
+      </div>
+
+      <%= @page[Page.default_parts.first.to_sym] %>
+
+    <% if @category.posts.any? %>
+      <ul id="blog_posts">
+        <%= render :partial => "/blog/shared/post", :collection => @category.posts %>
+      </ul>
+    <% else %>
+      <p>
+        <%= t('.no_posts') %>
+      </p>
+    <% end %>
+    </div>
+    <div class="bottom_posts">
+    <a href="<%= blog_root_url %>">View all posts</a></p>
+    </div>
+  </div>
+</div>
 <% end %>
 
+
+
 <% content_for :body_content_right do %>
-  <%= render :partial => "/blog/shared/categories" %>
+  <div class="body_content_right">
+    <div class="news">
+      <div class="top"></div>
+      <div class="middle">
+        <div class="head">
+          <h4>More news</h4>
+          <p>News in other related blogs</p>
+          <span class="line"></span>
+        </div>
+        <ul id="news_list"></ul>
+      </div>
+      <div class="bottom">
+        <p class="feed"><a href="#">subscribe to our news feed</a></p>
+      </div>
+    </div>
+
+  <div class="categories">
+    <div class="top"></div>
+    <div class="middle">
+      <div class="head">
+        <h4>Categories</h4>
+        <p>News categorized</p>
+        <span class="line"></span>
+      </div>
+      <ul id="categories_list">
+      <%= render :partial => "/blog/shared/categories" %>
+    </ul>
+    </div>
+    <div class="bottom">
+      <p class="feed"><a href="#">subscribe to our news feed</a></p>
+    </div>
+  </div>
+  </div>
 <% end %>
 
 <%= render :partial => "/shared/content_page" %>

@@ -1,11 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Geoportal</title>
+  <title>Unlimited Shelf</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="shortcut icon" href="/images/favicon.ico"/>
+  <%= stylesheet_link_tag 'layout' %>
 </head>
-<body>
 
-  <%= yield %>
+<% if (action_name == 'home') %>
+<body class="home">
+<% else %>
+<body>
+<% end %>
+
+  <div id="layout">
+
+    <div id="content">
+      <div id="title">
+        <div class="inner_title">
+         <div class="left">
+              <h1>Unlimited Shelf</h1>
+              <p class="subtitle">The world map as we know it is about to change</p>
+          </div>
+          <div class="right">
+            <ul>
+              <li><a href="/">HOME</a></li>
+              <li><a href="/explore">EXPLORE</a></li>
+              <li><a href="/events">EVENTS</a></li>
+              <li><a href="/blog">BLOG</a></li>
+              <li><a href="/about">ABOUT</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+     <%= yield %>
+
+    </div> <!-- End content -->
+
+  <%= render :partial => 'layouts/footer', :locals => {:extra_class => nil } %>
+
+  </div> <!-- End layout -->
 
 </body>
 </html>

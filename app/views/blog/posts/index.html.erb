@@ -1,15 +1,90 @@
 <% content_for :body_content_left do %>
-  <%= @page[Page.default_parts.first.to_sym] %>
+<div class="body_content_left">
+  <div class="post_content">
+    <div class="top_posts"></div>
+    <div class="middle_posts">
+      <div class="head_posts">
+        <div class="left">
+          <h1>Latest news</h1>
+        </div>
+        <div class="right">
+          <p class="feed"><a href="<%= blog_rss_feed_url %>">subscribe to our blog</a></p>
+        </div>
+        <span class="line"></span>
+      </div>
 
-  <ul id="blog_posts">
-    <%= render :partial => "/blog/shared/post", :collection => @blog_posts %>
-  </ul>
+      <%= @page[Page.default_parts.first.to_sym] %>
+
+      <ul id="blog_posts">
+        <%= render :partial => "/blog/shared/post", :collection => @blog_posts %>
+      </ul>
+    </div>
+    <div class="bottom_posts">
+      <% if @blog_posts.total_pages > 1 %>
+      <% if @blog_posts.current_page < @blog_posts.total_pages %>
+      <a href="<%= blog_root_path(:page => @blog_posts.next_page) %>">Previous posts</a>
+      <% end -%>
+      <% if @blog_posts.current_page > 1 %>
+      <a href="<%= blog_root_path(:page => @blog_posts.previous_page) %>" class="next">Next posts</a>
+      <% end -%>
+      <% end -%>
+    </div>
+  </div>
+</div>
 <% end %>
 
 <% content_for :body_content_right do %>
+<div class="body_content_right">
   <%= @page[Page.default_parts.second.to_sym] %>
 
-  <%= render :partial => "/blog/shared/categories" %>
+  <div class="twitter">
+    <div class="top"></div>
+    <div class="middle">
+      <div class="head">
+        <h3>Latest on twitter</h3>
+        <span class="line"></span>
+      </div>
+      <ul id="tweets_list"></ul>
+    </div>
+    <div class="bottom">
+      <a href="http://twitter.com/UNEPGRID" target="_blank">Follow us on Twitter</a>
+    </div>
+  </div>
+
+  <div class="categories">
+    <div class="top"></div>
+    <div class="middle">
+      <div class="head">
+        <h4>Categories</h4>
+        <p>News categorized</p>
+        <span class="line"></span>
+      </div>
+      <ul id="categories_list">
+      <%= render :partial => "/blog/shared/categories" %>
+    </ul>
+    </div>
+    <div class="bottom">
+      <p class="feed"><a href="#">subscribe to our news feed</a></p>
+    </div>
+  </div>
+
+  <div class="news">
+    <div class="top"></div>
+    <div class="middle">
+      <div class="head">
+        <h4>More news</h4>
+        <p>News in other related blogs</p>
+        <span class="line"></span>
+      </div>
+      <ul id="news_list"></ul>
+    </div>
+    <div class="bottom">
+      <p class="feed"><a href="#">subscribe to our news feed</a></p>
+    </div>
+  </div>
+
+</div>
+
 <% end %>
 
 <%= render :partial => "/shared/content_page" %>

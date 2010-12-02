@@ -4,7 +4,7 @@ ul {list-style:none;}
 a {text-decoration:underline;}
 
 body{background:#ADC2C4; font:normal 12px Arial;}
-
+input:focus {outline:none;}
 div.space80 {float:left; width:100%; height:80px;}
 div.space40 {float:left; width:100%; height:40px;}
 
@@ -17,10 +17,10 @@ div#content {margin:0 auto; width:955px; min-height:850px;}
 div#title {float:left; width:100%; padding:0 0 50px 0; background:#ADC2C4;}
 div#title div.inner_title {width:955px; margin:50px auto;}
 div#title div.inner_title h1 {float:left; width:100%; font:bold 30px Arial; color:#283F49; letter-spacing:1px; line-height:30px;}
-div#title div.inner_title p {float:left; padding:5px 0 0 0; width:100%; font:bold 16px Arial; color:white; letter-spacing:-1px;}
+div#title div.inner_title p {float:left; padding:5px 0 0 0; width:100%; font:normal 16px Arial; color:#207D8A; letter-spacing:0px;}
 div#title div.inner_title div.left {float:left; width:400px;}
 div#title div.inner_title div.right {float:right; width:500px;}
-div#title div.inner_title div.right ul.menu {float:right; width:500px;}
+div#title div.inner_title div.right ul.menu {float:right; width:380px;}
 div#title div.inner_title div.right ul.menu li {float:left; top:0; left:0; width:auto; margin:0 5px;}
 div#title div.inner_title div.right ul.menu li a {float:left; margin:0; background:url('/images/common/left_bttn_menu.png') no-repeat 0 0; width:auto; height:34px; text-decoration:none;}
 div#title div.inner_title div.right ul.menu li a span {float:left; background:url('/images/common/right_bttn_menu.png') no-repeat right 0; width:auto; height:26px; font:normal 13px Arial; /*display:inline-block;*/ margin:0 0 0 6px; text-decoration:none; color:white; padding:8px 9px 0 3px; }
@@ -32,29 +32,26 @@ div#title div.inner_title div.right ul.menu li a.pressed span {background-positi
 
 /* HOME */
 
-div#statement {float:left; width:100%; padding:0 0 100px 0;}
+div#statement {float:left; width:100%; padding:0 0 90px 0;}
 div#statement h2 {float:left; width:100%; font:normal 32px Arial; color:#283F49; letter-spacing:1px; line-height:30px;}
 
 div#search {float:left; width:100%; padding:0 0 56px 0;}
 div#search div#top {float:left; width:100%; height:4px; margin:0; padding:0; background:url(/images/home/home_search_top.png) no-repeat center 0;}
-div#search div#middle {position:relative; float:left; width:895px; height:90px; padding:30px 30px 21px 30px; height:auto; background:url(/images/home/home_search_middle.png) no-repeat 0 0;}
+div#search div#middle {position:relative; float:left; width:895px; height:90px; padding:20px 30px 21px 30px; height:auto; background:url(/images/home/home_search_middle.png) no-repeat 0 0;}
 div#search div#middle div.left {float:left; width:600px;}
 div#search div#middle div.left h4 {float:left; font:normal 13px Arial; color:white; letter-spacing:1px; margin:0;}
 div#search div#middle div.left form {float:left; width:577px; height:40px; padding:8px 0;}
 div#search div#middle div.left form h4 {float:left; width:100%; padding:2px 0 8px; font:normal 15px Arial; color:#333333; letter-spacing:0;}
 div#search div#middle div.left form input[type="text"] {float:left; width:458px; height:15px; margin:0; padding:15px 0 15px 15px; background:url(/images/home/home_search_text_background.png) no-repeat left 0; border:none; font:normal 15px Arial; color:#999999; font-style:italic;}
-div#search div#middle div.left form input[type="submit"] {float:left; width:95px; height:44px; margin:0; background:url('/images/common/search_bttn.png') no-repeat 0 0; border:none; font:bold 17px Arial; color:white; text-align:center; text-shadow:0 -1px #917401;}
+div#search div#middle div.left form input[type="submit"] {float:left; width:95px; height:44px; margin:0; background:url('/images/common/search_bttn.png') no-repeat 0 0; border:none; font:normal 17px Arial; color:white; text-align:center; text-shadow:0 -1px #917401;}
 div#search div#middle div.left form input[type="submit"]:hover {background-position:0 -44px; cursor:pointer;}
 div#search div#middle div.left p {float:left; font:normal 13px Arial; color:white;}
 div#search div#middle div.left p a {text-decoration:underline; color:#FFCC00;}
 div#search div#middle div.left p a:hover {text-decoration:none; color:#FFCC00;}
 div#search div#middle div.right {position:absolute; width:294px; right:30px; top:0px;}
-div#search div#middle div.right h4 {float:left; font:normal 12px Arial; color:white; letter-spacing:1px; margin:31px 0 0;}
-
-div#search div#middle div.right a.explore {float:left; width:296px; height:37px; background:url('/images/common/explore_bttn.png') no-repeat 0 0; text-align:center; font:normal 19px Arial; color:white; text-decoration:none; padding:7px 0 0 0; text-shadow:0 -1px #567300; margin:8px 0 0;}
-
+div#search div#middle div.right h4 {float:left; font:normal 12px Arial; color:white; letter-spacing:1px; margin:21px 0 0;}
+div#search div#middle div.right a.explore {float:left; width:296px; height:34px; background:url('/images/common/explore_bttn.png') no-repeat 0 0; text-align:center; font:normal 19px Arial; color:white; text-decoration:none; padding:10px 0 0 0; text-shadow:0 -1px #567300; margin:8px 0 0;}
 div#search div#middle div.right a.explore:hover {background-position:0 -44px;}
-
 div#search div#bottom {float:left; width:100%; height:4px; margin:0; padding:0; background:url(/images/home/home_search_bottom.png) no-repeat center 0;}
 
 div#meaning {float:left; width:100%; padding:0 0 200px 0;}
@@ -67,14 +64,14 @@ div#extras {float:left; width:100%; padding:0 0 80px 0;}
 div#extras ul {float:left; width:100%; list-style:none;}
 div#extras ul li {float:left; width:295px; margin:0 30px 0 0;}
 div#extras ul li.last {margin:0; height:298px; background:url(/images/home/home_extras_last_bg.png) no-repeat center 0;}
-div#extras ul li p.section {font:normal 17px Arial; color:white; padding:5px 0;}
-div#extras ul li p.date {font:normal 13px Arial; color:white; padding:5px 0;}
+div#extras p.section {font:normal 17px Arial; color:#C1D7D8; padding:5px 0;}
+div#extras ul li p.date {font:normal 13px Arial; color:#C5DFE0; padding:5px 0;}
 div#extras ul li p.title {min-height:50px;} /*Ok to reserve two lines of height with min-height*/
 div#extras ul li p.title a {font:normal 21px Arial; color:#FFCC00; text-decoration:none; line-height:-2px; padding:5px 0;}
 div#extras ul li p.title a:hover {font:normal 21px Arial; color:#FFCC00;}
-div#extras ul li p.description {font:normal 13px Arial; color:white; padding:5px 0;}
-div#extras ul li p a {font:normal 13px Arial; color:white; text-decoration:underline;}
-div#extras ul li p a:hover {float:left: font:normal 13px Arial; color:white; text-decoration:none;}
+div#extras ul li p.description {font:normal 13px Arial; color:#C5DFE0; padding:5px 0;}
+div#extras ul li p a {font:normal 13px Arial; color:#C5DFE0; text-decoration:underline;}
+div#extras ul li p a:hover {text-decoration:none;}
 
 
 /* BLOG */
@@ -99,9 +96,9 @@ div.body_content_left div.middle_posts ul#blog_posts li h2 a {font:bold 21px Ari
 div.body_content_left div.middle_posts ul#blog_posts li h2 a:hover {text-decoration:underline;}
 div.body_content_left div.middle_posts ul#blog_posts li p.posted_at {float:left; width:100%; font:normal 13px Arial; color:#999999; margin:5px 0 0 0;}
 div.body_content_left div.middle_posts ul#blog_posts li div.clearfix {float:left; width:100%; padding:20px 0 0 0;}
-div.body_content_left div.middle_posts ul#blog_posts li div.clearfix p span {font:normal 15px Arial; color:#666666; line-height:19px;}
-div.body_content_left div.middle_posts ul#blog_posts li div.clearfix a {font:normal 15px Arial; color:#FFCC00;}
-div.body_content_left div.middle_posts ul#blog_posts li div.clearfix a:hover {color:#FF3300;}
+div.body_content_left div.middle_posts ul#blog_posts li div.clearfix p {font:normal 15px Arial; color:#666666; line-height:19px;}
+div.body_content_left div.middle_posts ul#blog_posts li a {font:normal 15px Arial; color:#FFCC00;}
+div.body_content_left div.middle_posts ul#blog_posts li a:hover {color:#FF3300;}
 div.body_content_left div.bottom_posts {float:left; width:633px; height:85px; background:url(/images/round/bottom_grey.png) no-repeat 0 0;}
 div.body_content_left div.bottom_posts_no_info {float:left; width:633px; height:25px; background:url(/images/round/bottom_white.png) no-repeat 0 0;}
 
@@ -379,8 +376,8 @@ div.error_title div.inner_title a.go_home_bttn:hover {background-position:0 -56p
 #footer div.inner_footer div.left p.list a {color:#BFD8DA;}
 #footer div.inner_footer div.left p.list a:hover {color:#CCCCCC;}
 #footer div.inner_footer div.right {float:right; width:820px; }
-#footer div.inner_footer div.right ul {float:right; width:100%;}
-#footer div.inner_footer div.right ul li {float:right; width:auto; padding:0 25px;}
+#footer div.inner_footer div.right ul {float:right; width:556px;}
+#footer div.inner_footer div.right ul li {float:left; width:auto; padding:0 25px;}
 #footer div.inner_footer div.right ul li.fixed {width:115px;}
 #footer div.inner_footer div.right ul li.fixed.last {width:105px;}
 #footer div.inner_footer div.right ul li.last {padding:0 0 0 25px;}

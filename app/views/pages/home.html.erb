@@ -1,20 +1,20 @@
 <div id="statement">
-  <h2>The Continental Shelf Program follows the world’s costal states in establishing the limits of their maritime jurisdiction</h2>
+  <h2 class="cufon_museo_sans">The Continental Shelf Program follows the world’s costal states in establishing the limits of their maritime jurisdiction</h2>
 </div> <!-- End statement -->
 
 <div id="search">
   <div id="top"></div>
   <div id="middle">
   <div class="left">
-    <h4>SEARCH SUBMISSIONS BY COUNTRY / STATE</h4>
+    <h4 class="cufon_museo_slab">SEARCH SUBMISSIONS BY COUNTRY / STATE</h4>
     <form action="/explore" method="get">
-      <input type="text" value="Enter query" name="country_or_state"/>
+      <input type="text" value="Enter query" name="country_or_state" onclick="this.value=''"/>
       <input type="submit" value="Search" />
     </form>
     <p>ie. <a href="">Spain</a>, <a href="">México</a> or <a href="">United States</a></p>
   </div>
   <div class="right">
-    <h4>EXPLORE THE WORLD’S COASTAL STATES</h4>
+    <h4 class="cufon_museo_slab">EXPLORE THE WORLD’S COASTAL STATES</h4>
     <a href="/explore" class="explore">Explore the world</a>
   </div>
   </div>
@@ -23,23 +23,26 @@
 
 <div id="meaning">
   <div id="left">
-    <p>The aim is to assist developing states in establishing the outer limits of their continental shelves through submissions</p>
+    <p class="cufon_museo_sans">The aim is to assist developing states in establishing the outer limits of their continental shelves through submissions</p>
   </div>
   <div id="right">
-    <p>This will lead to the wise use of ocean resources and help the establishment of marine protected areas</p>
+    <p class="cufon_museo_sans">This will lead to the wise use of ocean resources and help the establishment of marine protected areas</p>
   </div>
 </div> <!-- End meaning -->
 
 <div id="extras">
   <% posts = BlogPost.live.limit(2) %>
   <% unless posts.empty? %>
+
+ <p class="cufon_museo_slab section">FROM THE BLOG</p>
   <ul>
+
   <% posts.each do |post| %>
     <li>
-      <p class="section">FROM THE BLOG</p>
+
     <p class="date"><%= time_ago_in_words(post.published_at) %></p>
       <!-- <p class="date"><%= post.published_at.strftime("%d/%m/%Y") %></p> -->
-      <p class="title"><%= link_to post.title, blog_post_url(post) %></p>
+      <p class="cufon_museo_sans title"><%= link_to post.title, blog_post_url(post) %></p>
       <p class="description">
     <%= truncate(strip_tags(post.body),
                             :omission => raw("... <a href=\"#{blog_post_url(post)}\">Read more</a>"),
@@ -51,7 +54,7 @@
   <% end %>
 
   <li class="last">
-      <p class="section">NEXT EVENT</p>
+      <p class="cufon_museo_slab section">NEXT EVENT</p>
       <p class="date"></p>
       <p class="title"></p>
       <p class="description"></p>

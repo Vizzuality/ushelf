@@ -1,0 +1,143 @@
+/* RESET */
+body,div,ul,li,ol,h1,h2,h3,h4,h5,h6,form,fieldset,p{margin:0; padding:0; font-weight:normal;}
+body {float:left; background:#B7CED0;}
+img,fieldset{border:none; padding:0; margin:0;}
+
+body{font:normal 12px Arial;}
+span.clear{clear:both;}
+a:focus{outline:none}
+input:focus{outline:none;}
+ul {list-style:none;}
+
+/* GENERAL */
+div#layout_header {position:absolute; top:0; left:0; width:100%; background:url('/images/home/header_bkg_repeated.jpg') repeat-x 0; z-index:10;}
+div#layout {position:absolute; top:310px; left:0; width:100%; background-color:#103842; z-index:10;}
+div#content {margin:0 auto; width:1157px; height:auto;}
+div#content_inside {float:left; width:954px; height:auto; margin:0 0 0 150px;}
+div#header {float:left; margin:0; width:1147px; height:324px; background:url('/images/home/image_header.jpg') no-repeat 0 0; padding:0 20px 0 70px ;}
+div#header h1.title {float:left; margin:50px 0 0 0; width:400px; height:50px; left:0; font:bold 48px Arial, Helvetica; color:#6BA9B1;}
+div#header ul.menu {float:right; width:454px; position:relative; list-style-type:none; margin:15px 0 0 0; padding:auto; font-family:Arial, Helvetica; font-size:20px; color:#FFFFFF; }
+div#header ul.menu li {float:left; list-style:none; margin:0; padding:0; margin:0 0 0 10px;}
+div#header ul.menu li a {margin:0px; font-family:Arial, Helvetica; font-size:20px; color:#0E3943; text-decoration:none;}
+div#header ul.menu li a:hover{text-decoration:underline;}
+
+/* HOME */
+div#home_info {float:left; width:100%;}
+div#home_info ul {float:left; width:100%; margin:15px 0 0 0;}
+div#home_info ul li {float:left; width:270px; margin:0 27px 0 0;}
+div#home_info ul li p {font:bold 18px Arial; color:#879BA0; text-decoration:none;}
+div#home_info ul li.last {margin:0;}
+
+div#home_search {float:left; width:100%;}
+div#home_search div.left {float:left; width:570px;}
+div#home_search div.left h4 {font:bold 16px Arial; color:#FFFFFF; letter-spacing:-1px; padding:0;}
+div#home_search div.left form {float:left; width:554px; height:85px; padding:8px; background-color:#CCCCCC;}
+div#home_search div.left form input[type="text"] {float:left; width:400px; height:15px; padding:9px 10px 9px 10px; margin:0; background-color:#FFFFFF; border:none; font:normal 15px Arial; color:#999999; font-style:italic;}
+div#home_search div.left form input[type="submit"] {float:left; width:120px; height:34px; margin:0; background:url(/images/home/input_bttn.png) no-repeat left top; border:none; font:bold 17px Arial; color:white;}
+div#home_search div.left form input[type="submit"]:hover {background-position:0 -34px; cursor:pointer;}
+div#home_search div.right {float:left; top:0px; height:200px; margin:0 0 0 22px;}
+div#home_search div.right h4 {float:left; width:100%; font:bold 23px Arial; color:#FFFFFF;}
+div#home_search div.right span.map_explore {float:left; width:240px; height:146px; background:url('/images/home/map_explore.png') no-repeat 0 0;}
+
+div#home_extras {float:left; width:100%;}
+div#home_extras ul {float:left; width:100%; margin:15px 0 0 0;}
+div#home_extras ul li {float:left; width:270px; margin:0 27px 0 0;}
+div#home_extras ul li.last {margin:0;}
+div#home_extras ul li span.home_gallery {float:left; width:278px; height:154px; background:url('/images/home/home_gallery.png') no-repeat 0 0;}
+div#home_extras ul li h2 {font:bold 16px Arial; color:#879BA0; text-decoration:none;}
+div#home_extras ul li h4 {font:bold 16px Arial; color:#FFFFFF; text-decoration:none;}
+div#home_extras ul li p.title {margin:0; font:bold 16px Arial; color:#879BA0; text-decoration:none;}
+div#home_extras ul li p.text {margin:0; font:bold 13px Arial; color:#879BA0; text-decoration:none;}
+div#home_extras ul li p.more {margin:0; font:normal 13px Arial; color:#FFFFFF; text-decoration:none;}
+
+
+/* EVENTS */
+
+div.body_content_left div ul#events {float:left; width:100%;}
+div.body_content_left div ul#events li {float:left; width:100%; padding:33px 0 33px 0; border-bottom:1px solid #E5E5E5;}
+div.body_content_left div ul#events li.last {border-bottom:none;}
+div.body_content_left div ul#events li a {text-decoration:none;}
+div.body_content_left div ul#events li div.left {float:left; width:64px; height:51px; padding:5px 0 10px; background:url(/images/events/date_bkg.png) no-repeat 0 0; margin:0 11px 0 0;}
+div.body_content_left div ul#events li div.left p.day {float:left; width:100%; text-align:center; font:bold 37px Arial; color:white; text-shadow:0 1px #AF4418; letter-spacing:-2px; line-height:35px; margin:5px 0 0 0;}
+div.body_content_left div ul#events li div.left p.month {float:left; width:100%; text-align:center; font:bold 13px Arial; color:white; text-shadow:0 1px #AF4418; line-height:10px; letter-spacing:0px;}
+div.body_content_left div ul#events li div.right {float:left; width:478px;}
+div.body_content_left div ul#events li div.right h2 {float:left; width:100%;}
+div.body_content_left div ul#events li div.right h2 a {font:bold 17px Arial; color:#FF6600; text-decoration:none;}
+div.body_content_left div ul#events li div.right h2 a:hover {text-decoration:underline;}
+div.body_content_left div ul#events li div.right p.location {float:left; width:100%; font:normal 13px Arial; color:#999999; padding:0 0 13px 0;}
+div.body_content_left div ul#events li div.right p {float:left; width:100%; font:normal 13px Arial; color:#444444;}
+
+div.body_content_right {float:right; width:304px; padding:6px 0 50px 0;}
+div.body_content_right div.opaque {position:relative; float:right; width:304px;}
+div.body_content_right div.opaque div.top {float:left; width:304px; height:15px; background:url(/images/round/top_grey_opaque_short.png) no-repeat center 0;}
+div.body_content_right div.opaque div.middle {float:left; width:234px; padding:0 35px; height:auto; background:url(/images/round/middle_grey_opaque_short.png) repeat-y center 0;}
+div.body_content_right div.opaque div.middle div.head {position:relative; float:left; width:100%; padding:0; height:86px;}
+div.body_content_right div.opaque div.middle div.head h3 {font:bold 23px Arial; color:white; letter-spacing:-1px; width:100%; padding:12px 0 0 0;}
+div.body_content_right div.opaque div.middle div.head p {font:normal 15px Arial; color:#9B9FA7; padding:4px 0 0 0;}
+div.body_content_right div.opaque div.middle div.head span.line {position:absolute; height:1px; width:286px; bottom:0; left:-26px; background:black; opacity:0.35; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=35);}
+div.body_content_right div.opaque div.middle div.calendar {float:left; margin:30px 0 0 0; width:100%; height:261px;}
+div.body_content_right div.opaque div.bottom {float:left; width:304px; height:15px; background:url(/images/round/bottom_grey_opaque_short_2.png) no-repeat center bottom; margin:0;}
+div.body_content_right div.opaque div.loader {display:none; position:absolute; height:234px; width:234px; padding:0; margin:0; background:none; left:30px;}
+div.body_content_right div.opaque div.loader img {position:absolute; height:16px; width:16px; left:50%; top:50%; margin:-8px 0 0 -8px;}
+
+
+
+/* EVENT */
+
+div.head_event div.top {float:left; width:100%; height:15px; background:url(/images/round/top_orange.png) no-repeat 0 0; margin:55px 0 0 0;}
+div.head_event div.middle {position:relative; float:left; width:553px; padding:20px 40px 30px 40px; height:auto; background:url(/images/round/middle_orange.png) repeat-y 0 0;}
+div.head_event div.middle p.back {float:left; width:600px; padding:0 0 0 9px; background:url(/images/icons/white_left_arrow.png) no-repeat 0 4px; text-shadow:none;}
+div.head_event div.middle p.back a {font:normal 13px Arial; color:white;}
+div.head_event div.middle p.back a:hover {color:#F7F7F7;}
+div.head_event div.middle div.left {float:left; width:64px; height:51px; padding:5px 0 10px; background:url(/images/events/date_bkg_grey.png) no-repeat 0 0; margin:15px 11px 0 0;}
+div.head_event div.middle div.left p.day {float:left; width:100%; text-align:center; font:bold 37px Arial; color:#FF6428; text-shadow:0 -1px #614E42; letter-spacing:-2px; padding:0; margin:5px 0 0 0; line-height:35px;}
+div.head_event div.middle div.left p.month {float:left; width:100%; text-align:center; font:bold 13px Arial; color:#FF6428; text-shadow:0 -1px #614E42; line-height:10px; letter-spacing:0px; padding:0; margin:0;}
+div.head_event div.middle div.right {float:left; width:478px;}
+div.head_event div.middle h1 {float:left; width:100%; font:bold 21px Arial; color:white; padding:15px 0 0 0; letter-spacing:-1px; text-shadow:0px 1px #B24B1D;}
+div.head_event div.middle p {float:left; width:100%; padding:5px 0 0 0; font:normal 13px Arial; color:white; text-shadow:0 -1px #B24B1D;}
+div.head_event div.middle span.line {position:absolute; height:1px; width:615px; bottom:0; left:9px; background:#BF4C00;}
+div.middle_white {float:left; width:553px; padding:20px 40px 30px 40px; height:auto; background:url(/images/round/middle_white.png) repeat-y 0 0; font:normal 15px Arial; color:#666666;}
+div.middle_white.resume {position:relative;}
+div.middle_white.events {padding:0 40px 30px 40px;}
+div.middle_white.events ul {float:left; width:100%; margin:25px 0 0 0; padding:0;}
+
+div.middle_white.events ul li div.left p.day {float:left; width:100%; text-align:center; font:bold 37px Arial; color:white; text-shadow:0 1px #AF4418; letter-spacing:-2px; line-height:35px; margin:5px 0 0 0; padding:0;}
+div.middle_white.events ul li div.left p.month {float:left; width:100%; text-align:center; font:bold 13px Arial; color:white; text-shadow:0 1px #AF4418; line-height:10px; letter-spacing:0px; padding:0; margin:0;}
+
+
+div.middle_white.resume a.visit {float:left; width:144px; height:16px; margin:20px 0 0 0; padding:6px 0; text-align:center; font:bold 13px Arial; color:#666666; text-shadow:0 1px white; background:url(/images/events/visit_official.png) no-repeat 0 0; text-decoration:none;}
+div.middle_white.resume a.visit:hover {background-position:0 -28px;}
+div.middle_white.resume span.line {position:absolute; height:1px; width:615px; bottom:0; left:9px; background:#E5E5E5;}
+div.middle_white h6 {float:left; margin:15px 0 0 0; width:100%; font:bold 17px Arial; color:#666666;}
+div.middle_white ul {float:left; width:100%; margin:30px 0 0 0; padding:0;}
+div.middle_white ul li {float:left; width:265px; padding:0;}
+div.middle_white ul li a {text-decoration:none;}
+div.middle_white ul li div.left {float:left; width:64px; height:51px; padding:5px 0 10px; background:url(/images/events/date_bkg.png) no-repeat 0 0; margin:0 11px 0 0;}
+div.middle_white ul li div.left p.day {float:left; width:100%; text-align:center; font:bold 37px Arial; color:white; text-shadow:0 1px #AF4418; letter-spacing:-2px; line-height:35px; margin:5px 0 0 0;}
+div.middle_white ul li div.left p.month {float:left; width:100%; text-align:center; font:bold 13px Arial; color:white; text-shadow:0 1px #AF4418; line-height:10px; letter-spacing:0px;}
+div.middle_white ul li div.right {float:left; width:190px;}
+div.middle_white ul li div.right h6 {float:left; width:100%; margin:0; padding:0; line-height:16px;}
+div.middle_white ul li div.right h6 a {font:bold 15px Arial; color:#FF6600; text-decoration:none;}
+div.middle_white ul li div.right h6 a:hover {text-decoration:underline;}
+div.middle_white ul li div.right p.location {float:left; width:100%; font:normal 13px Arial; color:#999999; padding:4px 0 0 0;}
+div.middle_white p {float:left; width:100%; font:normal 15px Arial; color:#666666; line-height:19px;}
+div.bottom_white {float:left; width:633px; height:25px; background:url(/images/round/bottom_white.png) no-repeat 0 0;}
+
+div.body_content_right div.opaque div.middle div.head p a {font:normal 15px Arial; color:white;}
+div.body_content_right div.opaque div.middle div.head p a:hover {text-decoration:none;}
+
+
+/* Footer */
+div#footer {position:absolute; top:857px; left:0; width:100%; height:250px; background-color:#000000;}
+
+
+
+
+
+/*
+a.button {float:left; margin:20px 0 0 0 0; background:url('/images/home/input_bttn.png') no-repeat 0 0; width:120px; height:34px;}
+a.button:hover {background-position:0 -34px; cursor:pointer;}
+
+div#body_content {float:left; margin:0; width:1080px; height:200px; background-color:#0F3944; position:relative;}
+div#body_content span.image_bkg {position:absolute; width:1080px; height:253px; top:0; left:0; z-index:-1; background:url('/images/home/image_header.png') no-repeat 0 0;}
+*/

@@ -37,9 +37,10 @@
   <% posts.each do |post| %>
     <li>
       <p class="section">FROM THE BLOG</p>
-      <p class="date"><%= post.published_at.strftime("%d/%m/%Y") %></p>
+    <p class="date"><%= time_ago_in_words(post.published_at) %></p>
+      <!-- <p class="date"><%= post.published_at.strftime("%d/%m/%Y") %></p> -->
       <p class="title"><%= link_to post.title, blog_post_url(post) %></p>
-      <p class="text">
+      <p class="description">
     <%= truncate(strip_tags(post.body),
                             :omission => raw("... <a href=\"#{blog_post_url(post)}\">Read more</a>"),
                             :length => 250,
@@ -53,7 +54,7 @@
       <p class="section">NEXT EVENT</p>
       <p class="date"></p>
       <p class="title"></p>
-      <p class="text"></p>
+      <p class="description"></p>
   </li>
   </ul>
 </div> <!-- End extras -->

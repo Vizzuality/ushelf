@@ -15,18 +15,18 @@
 
       <%= @page[Page.default_parts.first.to_sym] %>
 
-    <% if @category.posts.any? %>
+      <% if @category.posts.any? %>
       <ul id="blog_posts">
         <%= render :partial => "/blog/shared/post", :collection => @category.posts %>
       </ul>
-    <% else %>
+      <% else %>
       <p>
         <%= t('.no_posts') %>
       </p>
-    <% end %>
+      <% end %>
     </div>
     <div class="bottom_posts">
-    <a href="<%= blog_root_url %>">View all posts</a></p>
+      <a href="<%= blog_root_url %>">View all posts</a></p>
     </div>
   </div>
 </div>

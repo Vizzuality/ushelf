@@ -22,7 +22,7 @@ set :user,  'ubuntu'
 
 set :deploy_to, "/home/ubuntu/www/#{application}"
 
-after "deploy:update_code", :symlinks, :asset_packages
+after "deploy:update_code", :run_migrations, :symlinks, :asset_packages
 after "deploy", "deploy:cleanup"
 
 desc "Restart Application"

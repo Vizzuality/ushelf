@@ -13,3 +13,11 @@ test:
   database: ushelf_test
   username: postgres
   password:
+    
+production:
+  adapter: postgresql
+  template: template_postgis
+  encoding: unicode
+  database: ushelf_production
+  username: postgres
+  password:    

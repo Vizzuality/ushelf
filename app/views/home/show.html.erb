@@ -54,12 +54,15 @@
     </ul>
   </div>
 
-  <% events = Event.limit(1) %>
+  <% if(@last_event) %>
   <div id="right">
     <p class="cufon_museo_slab section">NEXT EVENT</p>
-    <p class="date"><%= events.first.from.strftime("#{to_ordinal(events.first.from.day)} %b")%> <%= raw("&#8594; #{events.first.to.strftime("#{to_ordinal(events.first.to.day)} %b")}") unless events.first.one_day_event? %></p>
-    <p class="cufon_museo_sans title"><%= events.first.title %></p>
-    <p class="location"><%= events.first.location %></p>
+    <p class="date"><%= @last_event.from.strftime("#{to_ordinal(@last_event.from.day)} %b")%> <%= raw("&#8594; #{@last_event.to.strftime("#{to_ordinal(@last_event.to.day)} %b")}") unless @last_event.one_day_event? %></p>
+    <p class="cufon_museo_sans title"><%= @last_event.title %></p>
+    <p class="location"><%= @last_event.location %></p>
     <p class="more"><a href="/events">More</a></p>
   </div>
+  <% end %>
+  
+  
 </div> <!-- End extras -->

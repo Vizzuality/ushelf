@@ -2,7 +2,7 @@ Refinery::Application.routes.draw do
 
   filter(:refinery_locales) if defined?(RoutingFilter::RefineryLocales) # optionally use i18n.
 
-  root :to => 'pages#home'
+  root :to => 'home#show'
   match 'sitemap', :to => 'pages#sitemap'
 
   scope(:path => 'refinery', :as => 'admin', :module => 'admin') do

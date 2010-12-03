@@ -60,8 +60,8 @@ div#meaning div#left p {font:normal 23px Arial; color:#283F49; margin:0;}
 div#meaning div#right {float:right; width:455px; padding-left:0px;}
 div#meaning div#right p {font:normal 23px Arial; color:#283F49;}
 
-div#extras {float:left; width:100%; padding:0 0 64px 0;}
-div#extras div#left {float:left; width:650px;}
+div#extras {float:left; width:100%; padding:0 0 64px 0; margin:0;}
+div#extras div#left {float:left; width:650px; margin:18px 0 0 0;}
 div#extras div#left ul {float:left; width:100%;}
 div#extras div#left ul li {float:left; width:295px; margin:0 30px 0 0;}
 div#extras div#left p.section {font:normal 17px Arial; color:#C1D7D8; padding:5px 0;}
@@ -72,18 +72,16 @@ div#extras div#left ul li p.title a:hover {font:normal 21px Arial; color:#FFCC00
 div#extras div#left ul li p.description {font:normal 13px Arial; color:#C5DFE0; padding:5px 0;}
 div#extras div#left ul li p a {font:normal 13px Arial; color:#C5DFE0; text-decoration:underline;}
 div#extras div#left ul li p a:hover {text-decoration:none;}
-div#extras div#right {float:left; width:302px;}
-div#extras div#right div#top {float:left; width:302px; height:4px; margin:0; padding; background:url(/images/home/home_next_event_top.png) no-repeat center 0;}
-div#extras div#right div#middle {position:relative; float:left; width:302px; min-height:230px; padding:0px 20px 0px 20px; height:auto; background:url(/images/home/home_next_event_middle.png) no-repeat 0 0;}
-div#extras div#right div#middle p.section {font:normal 17px Arial; color:#081F26; padding:0;}
-div#extras div#right div#middle p.date {font:normal 13px Arial; color:#113944; padding:5px 0;}
-div#extras div#right div#middle p.title {min-height:50px;}
-div#extras div#right div#middle p.title a {font:normal 21px Arial; color:#0E3841; text-decoration:none; line-height:-2px; padding:5px 0;}
-div#extras div#right div#middle p.title a:hover {color:#0E3841;}
-div#extras div#right div#middle p.location {font:normal 15px Arial; color:#113944; padding:5px 0;}
-div#extras div#right div#middle p.more a {font:normal 15px Arial; color:#FF9900; text-decoration:underline;}
-div#extras div#right div#middle p.more a:hover {font:normal 15px Arial; color:#FF9900; text-decoration:none;}
-div#extras div#right div#bottom {float:left; width:302px; height:4px; margin:0; padding:0; background:url(/images/home/home_next_event_bottom.png) no-repeat center 0;}
+div#extras div#right {float:left; width:262px; min-height:238px; padding:0 20px; background:url(/images/home/home_extras_next_event_background.png) no-repeat 0 0;}
+div#extras div#right p.section {font:normal 17px Arial; color:#081F26; padding:0; padding:7px 0; margin:15px 0 0 0;}
+div#extras div#right p.date {font:normal 13px Arial; color:#113944; padding:5px 0;}
+div#extras div#right p.title {font:normal 21px Arial; min-height:50px;}
+div#extras div#right p.title a {font:normal 21px Arial; color:#0E3841; text-decoration:none; line-height:-2px; padding:5px 0;}
+div#extras div#right p.title a:hover {color:#0E3841;}
+div#extras div#right p.location {font:normal 15px Arial; color:#113944; padding:5px 0;}
+div#extras div#right p.more {font:normal 15px Arial; color:#FF9900; margin:30px 0 0 0;}
+div#extras div#right p.more a {font:normal 15px Arial; color:#FF9900; text-decoration:underline;}
+div#extras div#right p.more a:hover {font:normal 15px Arial; color:#FF9900; text-decoration:none;}
 
 
 /* BLOG */

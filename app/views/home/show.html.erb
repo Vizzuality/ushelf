@@ -30,14 +30,12 @@
   </div>
 </div> <!-- End meaning -->
 
-<div id="extras">
+<div id="aggregators">
+  <% if(@blog_posts) %>
   <div id="left">
     <p class="cufon_museo_slab section">FROM THE BLOG</p>
-
-    <% posts = BlogPost.live.limit(2) %>
-    <% unless posts.empty? %>
     <ul>
-      <% posts.each do |post| %>
+      <% @blog_posts.each do |post| %>
       <li>
         <p class="date"><%= time_ago_in_words(post.published_at) %> ago</p>
         <!-- <p class="date"><%= post.published_at.strftime("%d/%m/%Y") %></p> -->
@@ -50,19 +48,19 @@
         </p>
       </li>
       <% end %>
-      <% end %>
     </ul>
+    <% end %>
   </div>
 
   <% if(@last_event) %>
   <div id="right">
     <p class="cufon_museo_slab section">NEXT EVENT</p>
-    <p class="date"><%= @last_event.from.strftime("#{to_ordinal(@last_event.from.day)} %b")%> <%= raw("&#8594; #{@last_event.to.strftime("#{to_ordinal(@last_event.to.day)} %b")}") unless @last_event.one_day_event? %></p>
+    <p class="date">
+    <%= @last_event.from.strftime("#{to_ordinal(@last_event.from.day)}, %B, %Y")%> <%= raw("&#8594; #{@last_event.to.strftime("#{to_ordinal(@last_event.to.day)}, %B, %Y")}") unless @last_event.one_day_event? %></p>
     <p class="cufon_museo_sans title"><%= @last_event.title %></p>
     <p class="location"><%= @last_event.location %></p>
     <p class="more"><a href="/events">More</a></p>
   </div>
   <% end %>
-  
-  
+
 </div> <!-- End extras -->

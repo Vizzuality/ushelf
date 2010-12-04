@@ -4,14 +4,20 @@
   <title>Unlimited Shelf - <%= controller_name %> - <%= action_name %></title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <link rel="shortcut icon" href="/images/favicon.ico"/>
-  <%= stylesheet_link_tag 'layout' %>
-  <%= javascript_include_tag 'jquery', 'fonts/cufon-yui', 'fonts/Museo_Sans.js', 'fonts/Museo_Slab.js', 'application' %>
+  <%= raw stylesheet_link_merged :base %>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <%= raw javascript_include_merged :base %>
 </head>
 
-<% if (action_name == 'show') || (controller_name=='home') %>
+<%
+  home_bg = ['home']
+  misc_bg = ['events', 'blog', 'pages']
+%>
+
+<% if (controller_name=='home' || controller_name=='pages') %>
 <body class="home">
 <% else %>
-<body>
+<body class="events">
 <% end %>
 
   <div id="layout">
@@ -20,16 +26,16 @@
       <div id="title">
         <div class="inner_title">
          <div class="left">
-              <h1 class='cufon_museo_slab'>Unlimited Shelf</h1>
+              <h1 class='cufon_museo_slab'><a href='/'>Unlimited Shelf</a></h1>
               <p class="subtitle">The world map as we know it is about to change</p>
           </div>
           <div class="right">
             <ul class="menu">
-              <li><a <%= ((controller_name='pages')&&(action_name=='home')) ? "class='pressed'" : '' %> href="/"><span class="cufon_museo_slab">HOME</span></a></li>
-              <li><a <%= ((controller_name='pages')&&(action_name=='explore'))? "class='pressed'" : '' %> href="/explore"><span class="cufon_museo_slab">EXPLORE</span></a></li>
-              <li><a <%= ((controller_name='events')&&(action_name=='index')) ? "class='pressed'" : '' %> href="/events"><span class="cufon_museo_slab">EVENTS</span></a></li>
-              <li><a <%= ((controller_name='posts')&&(action_name=='index')) ? "class='pressed'" : '' %> href="/blog"><span class="cufon_museo_slab">BLOG</span></a></li>
-              <li><a <%= ((controller_name='pages')&&(action_name=='show')) ? "class='pressed'" : '' %> href="/about"><span class="cufon_museo_slab">ABOUT</span></a></li>
+              <li><a <%= (action_name=='home') ? "class='pressed'" : '' %> href="/"><span class="cufon_museo_slab">HOME</span></a></li>
+              <li><a <%= ((controller_name=='pages')&&(action_name=='explore'))? "class='pressed'" : '' %> href="/explore"><span class="cufon_museo_slab">EXPLORE</span></a></li>
+              <li><a <%= ((controller_name=='events')&&(action_name=='index')) ? "class='pressed'" : '' %> href="/events"><span class="cufon_museo_slab">EVENTS</span></a></li>
+              <li><a <%= ((controller_name=='posts')&&(action_name=='index')) ? "class='pressed'" : '' %> href="/blog"><span class="cufon_museo_slab">BLOG</span></a></li>
+              <li><a <%= ((controller_name=='pages')&&(action_name=='show')) ? "class='pressed'" : '' %> href="/about"><span class="cufon_museo_slab">ABOUT</span></a></li>
             </ul>
           </div>
         </div>

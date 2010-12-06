@@ -242,7 +242,7 @@ div.body_content_left div ul#events li div.right h2 a:hover {text-decoration:und
 div.body_content_left div ul#events li div.right p.location {float:left; width:100%; font:normal 13px Arial; color:#999999; padding:0 0 13px 0;}
 div.body_content_left div ul#events li div.right p {float:left; width:100%; font:normal 13px Arial; color:#444444;}
 
-div.body_content_right {float:right; width:304px; padding:5px 0 50px 0;}
+div.body_content_right {float:right; width:304px; padding:0px 0 50px 0;}
 div.body_content_right div.opaque {position:relative; float:right; width:304px;}
 div.body_content_right div.opaque div.top {float:left; width:304px; height:15px; background:url(/images/round/top_grey_opaque_short.png) no-repeat center 0;}
 div.body_content_right div.opaque div.middle {float:left; width:234px; padding:0 35px; height:auto; background:url(/images/round/middle_grey_opaque_short.png) repeat-y center 0;}
@@ -338,7 +338,7 @@ div.middle.image .nivo-controlNav a:hover {background-position:0 -6px; color:whi
 
 div.middle_white.site h3 {float:left; width:100%; font:bold 21px Arial; color:#333333; letter-spacing:-1px; padding:0 0 10px 0; margin:20px 0 0 0;}
 div.middle_white.site p {float:left; width:100%; font:normal 13px Arial; color:#666666; line-height:17px;}
-div.middle_white.site p a {font:normal 13px Arial; color:#FF6600; text-decoration:none;}
+div.middle_white.site p a {font:normal 13px Arial; color:#FFCC00; text-decoration:none;}
 div.middle_white.site p a:hover {text-decoration:underline;}
 div.middle_white p {float:left; width:100%; font:normal 15px Arial; color:#666666; line-height:19px;}
 div.bottom.site {float:left; width:633px; height:85px; background:url(/images/round/bottom_grey.png) no-repeat 0 0;}
@@ -357,9 +357,46 @@ div.opaque div.middle_site p a {border-bottom:1px dotted white; color:white; tex
 div.opaque div.middle_site p a:hover {border-bottom:1px solid white;}
 div.opaque div.bottom_site {float:left; width:304px; height:50px; background:url(/images/round/bottom_grey_opaque_short_2.png) no-repeat center 0;}
 div.opaque div.bottom_site p {float:left; width:auto; margin:17px 0 0 35px; text-align:left; font:normal 13px Arial; color:white; text-decoration:none;}
-div.opaque div.bottom_site p a {color:#FF6600; text-decoration:none;}
+div.opaque div.bottom_site p a {color:#FFCC00; text-decoration:none;}
 div.opaque div.bottom_site p a:hover {text-decoration:underline;}
 div.opaque div.bottom_site_empty {float:left; background:url(/images/round/bottom_grey_opaque_short_empty.png) no-repeat 0 0; width:286px; height:13px; margin:0 0 0 9px;}
+
+
+/* ABOUT */
+
+div#body_content_left div.about_left_column {float:left; width:633px;}
+div#body_content_left div.about_left_column div.head div.top {float:left; width:633px; height:15px; background:url(/images/round/top_orange.png) no-repeat 0 0; margin:0;}
+div#body_content_left div.about_left_column div.head div.top.first {margin:0;}
+div#body_content_left div.about_left_column div.head div.middle {position:relative; float:left; width:553px; padding:15px 40px 20px 40px; height:auto; background:url(/images/round/middle_orange.png) repeat-y 0 0;}
+div#body_content_left div.about_left_column div.head div.middle h2 {float:left; width:100%; font:bold 23px Arial; color:white; padding:0; letter-spacing:0px; text-shadow:0px 1px #B24B1D;}
+div#body_content_left div.about_left_column div.head div.middle span.line {position:absolute; height:1px; width:615px; bottom:0; left:9px; background:#CCCCCC;}
+div#body_content_left div.about_left_column div.middle {float:left; width:553px; padding:20px 40px 20px 40px; height:auto; background:url(/images/round/middle_white.png) repeat-y 0 0; font:normal 15px Arial; color:#666666;}
+div#body_content_left div.about_left_column div.middle.image {position:relative; width:615px; padding:0 9px 0 9px; height:350px;}
+div#body_content_left div.about_left_column div.middle.image span.line {position:absolute; bottom:0px; left:9px; width:615px; height:1px; background:#1B2E4E;}
+div#body_content_left div.about_left_column div.middle h3 {float:left; width:100%; font:bold 21px Arial; color:#333333; letter-spacing:0px; padding:15px 0 15px 0;}
+div#body_content_left div.about_left_column div.middle p {float:left; width:100%; font:normal 15px Arial; color:#666666; line-height:17px; padding:5px 0 5px 0;}
+div#body_content_left div.about_left_column div.middle p a {font:normal 15px Arial; color:#FFCC00; text-decoration:none;}
+div#body_content_left div.about_left_column div.middle p a:hover {text-decoration:underline;}
+div#body_content_left div.about_left_column div.middle ul {float:left; width:100%; margin:0px 0 10px 17px; list-style:square;}
+div#body_content_left div.about_left_column div.middle li {float:left; width:100%; margin:2px 0; padding:0;}
+div#body_content_left div.about_left_column div.bottom {float:left; width:633px; height:85px; background:url(/images/round/bottom_grey.png) no-repeat 0 0;}
+div#body_content_left div.about_left_column div.bottom a {float:right; margin:29px 40px 0 0; font:bold 15px Arial; color:#FFCC00; padding:0 0 0 17px; background:url(/images/icons/orange_up_arrow.png) no-repeat 0 4px; text-decoration:none; }
+div#body_content_left div.about_left_column div.bottom a:hover {color:#FFCC00; background-position:0 -24px; cursor:pointer;}
+
+div#body_content_right div#about_right_column {float:right; width:304px; height:100%; margin-top:5px; overflow:visible; position:relative;}
+div#body_content_right div.about_right {position:absolute; width:304px; height:auto; top:0;}
+div#body_content_right div.about_right div.top {float:right; width:304px; height:15px; background:url(/images/round/top_grey_opaque_short.png) no-repeat center 0;}
+div#body_content_right div.about_right div.middle {float:right; width:234px; padding:0 35px 20px; height:auto; background:url(/images/round/middle_grey_opaque_short.png) repeat-y center 0;}
+div#body_content_right div.about_right div.middle div.menu {position:relative; float:left; width:100%; padding:15px 0 22px 0;}
+div#body_content_right div.about_right div.middle div.menu h3 {font:bold 23px Arial; color:white; letter-spacing:1px; width:100%; padding:0 0 5px 0;}
+div#body_content_right div.about_right div.middle div.menu h3 a {text-decoration:none;}
+div#body_content_right div.about_right div.middle div.menu p {font:normal 15px Arial; color:#FFCC00; padding:3px 0 0 0;}
+div#body_content_right div.about_right div.middle div.menu span.line {position:absolute; height:1px; width:286px; bottom:0; left:-26px; background:#E5E5E5;}
+div#body_content_right div.about_right div.middle div.menu ul {float:left; width:100%; margin:5px 0 0 0;}
+div#body_content_right div.about_right div.middle div.menu ul li {float:left; width:100%; margin:2px 0; padding:0;}
+div#body_content_right div.about_right div.middle div.menu ul li a {font:normal 15px Arial; color:#FFCC00; text-decoration:underline;}
+div#body_content_right div.about_right div.middle div.menu ul li a:hover {text-decoration:none; cursor:pointer;}
+div#body_content_right div.about_right div.bottom {float:right; width:304px; height:15px; background:url(/images/round/bottom_grey_opaque_short.png) no-repeat center 0;}
 
 
 /* ERROR PAGES */

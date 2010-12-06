@@ -29,7 +29,7 @@
 
         //If there is twitter block
         if ($('div.twitter')[0]) {
-          var url = "http://search.twitter.com/search.json?q=vizzuality&rpp=5&callback=?";
+          var url = "http://search.twitter.com/search.json?q=UNEPGRID&rpp=5&callback=?";
           $.getJSON(url,function(data){
 		var dataSize = parseInt(data.results.length) - 1;
             $.each(data.results, function(i, item) {
@@ -75,12 +75,7 @@
           var icon = new OpenLayers.Icon('/images/common/marker.png', size, offset);
           markers.addMarker(new OpenLayers.Marker(center,icon));
         }
-		
-		if ($('.galleryStyle')[0]){		
-        	Galleria.loadTheme('/javascripts/galleria.classic.js');
-		    // Initialize Galleria
-		    $('.galleryStyle').galleria({thumbnails:'empty', preload:2,autoplay:5000,transition:'fade',show_counter:'false'});
-		}
+
         //---- CALENDAR
         if ($('div.calendar')[0]) {
 		
@@ -144,7 +139,7 @@
 	
 	if($('div#about_right_column')[0]){
 		$(window).scroll(function () {
-			if ($(window.pageYOffset)[0] > 708) {
+			if ($(window.pageYOffset)[0] > 160) {
 				$('div.about_right').css('position','fixed');
 				$('div.about_right').css('top','20px');
 			}else {

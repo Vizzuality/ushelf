@@ -5,6 +5,11 @@ Refinery::Application.routes.draw do
   root :to => 'home#show'
   match 'sitemap', :to => 'pages#sitemap'
 
+  # Features are mapped in /explore
+  resources :features, :path => 'explore'
+#  match 'features/random', :to => 'features#random'
+  match 'features/institutions', :to => 'features#institutions'
+
   scope(:path => 'refinery', :as => 'admin', :module => 'admin') do
     root :to => 'dashboard#index'
   end

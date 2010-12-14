@@ -9,16 +9,21 @@
   <%= raw javascript_include_merged :base %>
 </head>
 
-<%
-  home_bg = ['home']
-  misc_bg = ['events', 'blog', 'pages']
-%>
-
-<% if (controller_name=='home' || controller_name=='pages') %>
-<body class="home">
-<% else %>
-<body class="events">
-<% end %>
+<% if (controller_name == 'home')||(controller_name=='features') %>
+  <body class="background_v1">
+<%elsif (controller_name=='galleries') %>
+  <body class="background_v2">
+<%elsif (controller_name=='events')%>
+  <body class="background_v2">
+<%elsif ((controller_name=='posts')||(controller_name=='categories'))%>
+  <body class="background_v2">
+<%elsif (action_name == 'sitemap') %>
+  <body class="background_v2">
+<%elsif ((controller_name=='pages')&&(action_name != 'sitemap'))%>
+  <body class="background_v1">
+<%else%>
+  <body>
+<%end%>
 
   <div id="layout">
 
@@ -32,10 +37,10 @@
           <div class="right">
             <ul class="menu">
               <li><a <%= (action_name=='home') ? "class='pressed'" : '' %> href="/"><span class="cufon_museo_slab">HOME</span></a></li>
-              <li><a <%= ((controller_name=='pages')&&(action_name=='explore'))? "class='pressed'" : '' %> href="/explore"><span class="cufon_museo_slab">EXPLORE</span></a></li>
+              <li><a <%= (controller_name=='features')? "class='pressed'" : '' %> href="/explore"><span class="cufon_museo_slab">EXPLORE</span></a></li>
               <li><a <%= ((controller_name=='events')&&(action_name=='index')) ? "class='pressed'" : '' %> href="/events"><span class="cufon_museo_slab">EVENTS</span></a></li>
               <li><a <%= ((controller_name=='posts')&&(action_name=='index')) ? "class='pressed'" : '' %> href="/blog"><span class="cufon_museo_slab">BLOG</span></a></li>
-              <li><a <%= ((controller_name=='pages')&&(action_name=='show')) ? "class='pressed'" : '' %> href="/about"><span class="cufon_museo_slab">ABOUT</span></a></li>
+              <li><a <%= ((controller_name=='about')&&(action_name=='show')) ? "class='pressed'" : '' %> href="/about"><span class="cufon_museo_slab">ABOUT</span></a></li>
             </ul>
           </div>
         </div>

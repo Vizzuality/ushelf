@@ -164,10 +164,10 @@
 			
 			
 			if (result[i].country == null){
-				li_+='<h2><a href="'+result[i].url+'">'+result[i].title+'</a></h2><p><span>'+result[i].region+'</span></p>';
+				li_+='<h2><a href="'+result[i].url+'">'+result[i].title+'</a></h2><p><span>'+result[i].limit+'</span></p>';
 			}else {
-				li_+='<h2><a href="'+result[i].url+'">'+result[i].title+' - '+result[i].country+'</a></h2>'+
-	              '<p><span class="first">'+result[i].region+'</span><span>'+result[i].country+'</span></p>';				
+				li_+='<h2><a href="'+result[i].url+'">'+result[i].title+' - '+result[i].state+'</a></h2>'+
+	              '<p><span class="first">'+result[i].limit+'</span><span>'+result[i].state+'</span></p>';				
 			}
 
 			li_+='</div>'+
@@ -179,16 +179,16 @@
 			
             li_+='<div class="grey">'+
             '<div class="block">'+
-              '<h4>PRIMARY INSTITUTION</h4>'+
-              '<p>'+result[i].primary_institution_name+'</p>'+
+              '<h4>SUBMISSION STATUS</h4>'+
+              '<p>'+result[i].status+'</p>'+
             '</div>'+
             '<div class="block">'+
-              '<h4>WATER DEPTH</h4>'+
-              '<p>'+result[i].water_depth+'</p>'+
+              '<h4>LIMIT</h4>'+
+              '<p>'+result[i].limit+'</p>'+
             '</div>'+
             '<div class="block">'+
-              '<h4>HYDRATE DEPTH (mbsf)</h4>'+
-              '<p>'+result[i].hydrate_depth+'</p>'+
+              '<h4>AREA</h4>'+
+              '<p>'+result[i].area+'</p>'+
             '</div>'+
           '</div>'+
         '</li>';

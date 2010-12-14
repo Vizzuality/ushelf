@@ -1,11 +1,158 @@
-<% content_for :body_content_left do %>
-  <ul id="features">
-    <% @features.each do |feature| %>
-      <li>
-        <%= link_to feature.title, feature_url(feature) %>
-      </li>
-    <% end %>
-  </ul>
-<% end %>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Unlimited Shelf</title>
+  <link rel="shortcut icon" href="/images/favicon.ico"/>
+  <%= raw stylesheet_link_merged :base %>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <%= raw javascript_include_merged :base %>
+</head>
 
-<%= render :partial => "/shared/content_page" %>
+<body>
+
+  <div id="explore_map"></div>
+  <div id="blue_bkg"></div>
+
+  <div id="layout">
+
+    <div id="content">
+      <div id="title">
+        <div class="inner_title">
+         <div class="left">
+              <h1 class='cufon_museo_slab'><a href='/'>Unlimited Shelf</a></h1>
+              <p class="subtitle">The world map as we know it is about to change</p>
+          </div>
+          <div class="right">
+            <ul class="menu">
+              <li><a <%= (action_name=='home') ? "class='pressed'" : '' %> href="/"><span class="cufon_museo_slab">HOME</span></a></li>
+              <li><a <%= (controller_name=='features')? "class='pressed'" : '' %> href="/explore"><span class="cufon_museo_slab">EXPLORE</span></a></li>
+              <li><a <%= ((controller_name=='events')&&(action_name=='index')) ? "class='pressed'" : '' %> href="/events"><span class="cufon_museo_slab">EVENTS</span></a></li>
+              <li><a <%= ((controller_name=='posts')&&(action_name=='index')) ? "class='pressed'" : '' %> href="/blog"><span class="cufon_museo_slab">BLOG</span></a></li>
+              <li><a <%= ((controller_name=='about')&&(action_name=='show')) ? "class='pressed'" : '' %> href="/about"><span class="cufon_museo_slab">ABOUT</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <a onclick="zoomIn()" id="zoomIn"></a>
+      <a onclick="zoomOut()" id="zoomOut"></a>
+      <img class="loader" src="/images/explore/loading.png" title="loading" alt="loading"/>
+  </div>
+
+  <div id="explore_content">
+    <div class="body_content_left">
+      <div class="explore_content">
+        <div class="top_explore"></div>
+          <div class="middle_explore">
+            <div class="head_explore">
+              <div class="left">
+                <% if @features.total_pages > 1 %>
+          <h1>Viewing <%= @features.size %> of <%= @features.total_entries %> submissions</h1>
+        <% else %>
+          <h1>Viewing <%= pluralize(@features.total_entries, "site","sites") %></h1>
+        <% end %>
+                <p>Geographical polygons displaying maritime jurisdictions</p>
+              </div>
+              <% if @features.total_pages > 1 %>
+              <div class="right">
+                <p><a href="<%= features_path(:all => true) %>">view all</a></p>
+              </div>
+              <% end %>
+              <span class="line"></span>
+            </div>
+            <ul id="site_list">
+
+              <% @features.each_with_index do |feature,i| %>
+              <li <%= raw('class="last"') if feature == @features.last %>>
+                <div class="head">
+                  <div class="image">
+                    <p><%= feature.id %></p>
+                  </div>
+                  <div class="info">
+                    <h2><a href="/features/<%= feature.id %>"><%= feature.title %><%= " - #{feature.state}" unless feature.state.blank?  %></a></h2>
+                    <p><%if !feature.state.blank? %><span class="first"><%else%><span><%end%><%= feature.ref %></span><% unless feature.state.blank? %><span><%= feature.state %></span><% end %></p>
+                  </div>
+                </div>
+        <% unless feature.description.blank? %>
+                <p class="des"><%= truncate(strip_tags(feature.description),
+                                  :omission => raw("... <a href=\"#{feature_url(feature)}\">Read more</a>"),
+                                  :length => 250,
+                                  :preserve_html_tags => true) %></p>
+        <%end%>
+                <div class="grey">
+                  <div class="block">
+                    <h4>SUBMISSION STATUS</h4>
+                    <p><%= feature.status %></p>
+                  </div>
+                  <div class="block">
+                    <h4>LIMIT</h4>
+                    <p><%= feature.limit %></p>
+                  </div>
+                  <div class="block">
+                    <h4>AREA</h4>
+                    <p><%= feature.area %></p>
+                  </div>
+                </div>
+              </li>
+              <%- end %>
+            </ul>
+          </div>
+          <% if @features.total_pages > 1 %>
+            <div class="bottom_posts">
+              <% if @features.current_page > 1 %>
+              <a href="<%= features_path(:page => @features.previous_page) %>" id="prev_button">Previous submissions</a>
+              <% end %>
+              <% if @features.current_page < @features.total_pages %>
+              <a href="<%= features_path(:page => @features.next_page) %>" class="next" id="next_button">More submissions</a>
+              <% end %>
+            </div>
+          <% else %>
+            <div class="bottom_white">
+              <a href="#" id="prev_button">Previous submissions</a>
+              <a href="#" class="next" id="next_button">More submissions</a>
+            </div>
+          <% end %>
+      </div>
+    </div>
+
+    <div class="body_content_right">
+      <div class="opaque_explore">
+        <div class="top"></div>
+        <div class="middle">
+          <img id="loading" src="/images/explore/loading.gif" title="loading" alt="loading"/>
+          <h3>Filter sites</h3>
+          <form action="javascript:void getSites()">
+            <label>SEARCH BY NAME / COUNTRY</label>
+            <div class="first_value">
+              <input id="name_country" type="text" value="<%= params[:name_or_country] %>"/>
+              <input type="submit" value=""/>
+            </div>
+            <label>SUBMISSION STATUS</label>
+            <select>
+              <option selected="yes">All</option>
+              <% Feature.select("id, meta").map{ |f| f.status }.uniq.each do |name| %>
+              <option value="<%= name %>"><%= truncate(name, :length => 33) %></option>
+              <% end %>
+            </select>
+            <div class="long first">
+              <label>LIMIT</label>
+              <p class="water">< 5478</p>
+            </div>
+            <div class="water"></div>
+            <div class="long">
+              <label>AREA</label>
+              <p class="hydrate">< 404</p>
+            </div>
+            <div class="hydrate"></div>
+          </form>
+        </div>
+        <div class="bottom"></div>
+      </div>
+    </div>
+  </div>
+
+  <%= render :partial => 'layouts/footer', :locals => {:extra_class => 'explore' } %>
+
+  <%= raw javascript_include_merged :openlayer %>
+  <%= raw javascript_include_merged :explore %>
+</body>
+</html>

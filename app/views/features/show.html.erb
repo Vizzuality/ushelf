@@ -1,39 +1,180 @@
-<% content_for :body_content_title do %>
-
-  <%= @feature.title %>
-
-<% end %>
-
-<% content_for :body_content_left do %>
-
-  <div>
-    <h3>Title</h3>
-    <%=raw @feature.title %>
+<div class="body_content_left">
+  <div class="head_site">
+    <div class="top"></div>
+    <div class="middle">
+    <div class="<%= "#{@feature.status}".downcase %>"></div>
+      <h1><% unless @feature.title.blank? %> <%=raw @feature.title %> <%- end %></h1>
+      <%if !@feature.state.blank? %><p class="first">Submission <%else%><p class="empty_country"><%end%><%= @feature.ref %></p>
+      <span class="line"></span>
+    </div>
   </div>
-
-  <div>
-    <h3>Description</h3>
-    <%=raw @feature.description %>
+  <% if @feature.gallery %>
+  <div class="middle image">
+    <div class="slider">
+      <% @feature.gallery.gallery_entries.each do |entry| %>
+      <%= image_fu entry.image, :huge %>
+      <% end -%>
+    </div>
+    <div class="line"></div>
   </div>
+  <% end -%>
 
-  <div>
-    <h3>Gallery</h3>
-    <%=raw @feature.gallery_id %>
-  </div>
-
-  <!-- The Geom -->
-
-<% end %>
-
-<% content_for :body_content_right do %>
-  <h2><%= t('.other') %></h2>
-  <ul id="features">
-    <% @features.each do |feature| %>
-      <li>
-        <%= link_to feature.title, feature_url(feature) %>
-      </li>
+  <div class="middle_white site">
+    <% unless @feature.description.blank? %>
+    <h2>Area description</h2>
+    <p><%=raw @feature.description %></p>
     <% end %>
-  </ul>
-<% end %>
 
-<%= render :partial => "/shared/content_page" %>
+    <% unless @feature.limit.blank? %>
+    <h4>WATER DEPTH</h4>
+    <p><%= @feature.limit %></p>
+    <% end %>
+
+    <% unless @feature.area.blank? %>
+    <h4>AREA</h4>
+    <p><%= @feature.area %></p>
+    <% end %>
+
+    <h2>Marine Management</h2>
+
+    <% unless @feature.geology_of_the_area.blank? %>
+    <h4>GEOLOGY OF THE AREA</h4>
+    <p><%=raw @feature.geology_of_the_area %></p>
+    <% end %>
+
+    <% unless @feature.resources_of_the_area.blank? %>
+    <h4>RESOURCES OF THE AREA</h4>
+    <p><%=raw @feature.resources_of_the_area %></p>
+    <% end %>
+
+    <% unless @feature.maritime_transport_through_the_area.blank? %>
+    <h4>MARITIME TRANSPORT THROUGH THE AREA</h4>
+    <p><%=raw @feature.maritime_transport_through_the_area %></p>
+    <% end %>
+
+    <% unless @feature.harbors_in_the_area.blank? %>
+    <h4>HARBORS IN THE AREA</h4>
+    <p><%=raw @feature.harbors_in_the_area %></p>
+    <% end %>
+
+    <h2>Marine Protected Areas (MPA)</h2>
+
+    <% unless @feature.climate.blank? %>
+    <h4>CLIMATE</h4>
+    <p><%=raw @feature.climate %></p>
+    <% end %>
+
+    <% unless @feature.eutrophication.blank? %>
+    <h4>EUTROPHICATION</h4>
+    <p><%=raw @feature.eutrophication %></p>
+    <% end %>
+
+    <% unless @feature.hazardous_substances.blank? %>
+    <h4>HAZARDOUS SUBSTANCES</h4>
+    <p><%=raw @feature.hazardous_substances %></p>
+    <% end %>
+
+    <% unless @feature.radioactive_substances.blank? %>
+    <h4>RADIOACTIVE SUBSTANCES</h4>
+    <p><%=raw @feature.radioactive_substances %></p>
+    <% end %>
+
+    <% unless @feature.offshore_and_gas_industry.blank? %>
+    <h4>OFFSHORE AND GAS INDUSTRY</h4>
+    <p><%=raw @feature.offshore_and_gas_industry %></p>
+    <% end %>
+
+    <% unless @feature.fishing.blank? %>
+    <h4>OFFSHORE AND GAS INDUSTRY</h4>
+    <p><%=raw @feature.fishing %></p>
+    <% end %>
+
+    <% unless @feature.other_human_uses_and_impacts.blank? %>
+    <h4>OTHER HUMAN USES AND IMPACTS</h4>
+    <p><%=raw @feature.other_human_uses_and_impacts %></p>
+    <% end %>
+
+    <% unless @feature.biodiversity_and_ecosystems.blank? %>
+    <h4>BIODIVERSITY AND ECOSYSTEMS</h4>
+    <p><%=raw @feature.biodiversity_and_ecosystems %></p>
+    <% end %>
+
+  </div>
+
+  <div class="bottom site">
+    <p>This information was updated on <%= @feature.created_at.strftime("%d/%m/%G") %></p>
+    <% if logged_in? %>
+    <a href="/refinery/features/<%= @feature.id %>/edit">Edit this information</a>
+    <%- end %>
+  </div>
+</div>
+
+<div class="body_content_right features">
+  <div class="opaque site">
+    <div class="top"></div>
+    <div class="middle">
+      <div class="head">
+        <h3>Submission details</h3>
+        <p><%= @feature.status %> on <%= @feature.submission_date %></p>
+      </div>
+    </div>
+
+    <div class="middle_site">
+      <% unless @feature.status.blank? %>
+      <h6>SUBMITTED BY STATE</h6>
+      <p><%= @feature.state %></p>
+      <% end -%>
+      <% unless @feature.communications_received_with_regard_to_the_submission.blank? %>
+      <h6>COMMUNICATIONS FROM OTHER STATES</h6>
+      <%- @feature.communications_received_with_regard_to_the_submission.split(",").collect{ |s| s.to_s }.each do |i| %>
+      <ul>
+        <li> <%= i %> </li>
+      </ul>
+      <% end -%>
+      <% end -%>
+      <% unless @feature.provisions_of_article_76.blank? %>
+      <h6>PROVISIONS OF ARTICLE 76 INVOKED</h6>
+      <p><%= @feature.provisions_of_article_76 %></p>
+      <% end -%>
+    </div>
+    <div class="bottom_site_empty"></div>
+    <div class="sites">
+      <div class="top"></div>
+      <div class="middle">
+        <div class="head">
+          <h3>Legal information</h3>
+          <p>Convention treaties</p>
+        </div>
+      </div>
+      <div class="middle_site">
+
+      </div>
+
+      <div class="bottom_site_empty"></div>
+
+      <div class="sites">
+        <div class="top"></div>
+        <div class="middle">
+          <div class="head">
+            <h3>Browse our countries</h3>
+            <p><a href="/explore">Explore</a> other submissions</p>
+            <span class="line"></span>
+          </div>
+          <% features = Feature.limit(2).where("id != #{@feature.id}") %>
+          <% unless features.empty? %>
+          <ul>
+            <% features.each do |feature| %>
+            <li>
+              <h6><a href="<%= feature_url(feature) %>"><%= feature.title %> - <%= feature.state %></a></h6>
+              <span><p class="first"><%= feature.ref %></p><p><%= feature.state %></p></span>
+            </li>
+            <% end -%>
+          </ul>
+          <% end -%>
+        </div>
+        <div class="bottom"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    <%= raw javascript_include_merged :openlayer %>

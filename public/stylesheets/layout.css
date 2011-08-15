@@ -3,7 +3,7 @@ img,fieldset{border:none; padding:0; margin:0;}
 ul {list-style:none;}
 a {text-decoration:underline;}
 
-body.background_v1 {float:left; background:url(/images/backgrounds/home_bg.png) no-repeat center 0 #0F4655;}
+body.background_v1 {float:left; background:url(/images/backgrounds/home_bg.png) no-repeat center 0 #114A58;}
 body.background_v2 {float:left; background:url(/images/backgrounds/non_home_bg.png) no-repeat center 0 #0F4655;}
 /*#ADC2C4*/
 
@@ -85,14 +85,16 @@ div#aggregators div#right p.title {font:normal 21px Arial; min-height:50px;}
 div#aggregators div#right p.title a {font:normal 21px Arial; color:#0E3841; text-decoration:none; line-height:-2px; padding:5px 0;}
 div#aggregators div#right p.title a:hover {color:#0E3841;}
 div#aggregators div#right p.location {font:normal 15px Arial; color:#113944; padding:5px 0;}
-div#aggregators div#right p.more {font:normal 15px Arial; color:#FF9900; margin:30px 0 0 0;}
-div#aggregators div#right p.more a {font:normal 15px Arial; color:#FF9900; text-decoration:underline;}
+div#aggregators div#right p.more {font:normal 13px Arial; color:#FF9900; margin:30px 0 0 0;}
+div#aggregators div#right p.more a {font:normal 13px Arial; color:#FF9900; text-decoration:underline;}
 div#aggregators div#right p.more a:hover {text-decoration:none;}
 
 
 /* BLOG */
 div.body_content_left {float:left; width:633px; padding:0 0 50px;}
 div.body_content_left div.top_posts {float:left; width:100%; height:15px; background:url(/images/round/top_white.png) no-repeat 0 0;}
+div.body_content_left div.middle_posts p {font:normal 13px Arial; color:#999999;}
+
 div.body_content_left div.middle_posts {float:left; width:553px; padding:20px 40px 0 40px; height:auto; background:url(/images/round/middle_white.png) repeat-y 0 0;}
 div.body_content_left div.middle_posts div.head_posts {position:relative; float:left; height:72px; padding:0; width:100%}
 div.body_content_left div.middle_posts div.head_posts div.left {float:left; width:300px;}
@@ -127,7 +129,8 @@ div.body_content_left div.bottom_posts a.next:hover {color:#FFCC00; background-p
 div.body_content_right {float:right; width:304px; padding:0px 0 50px 0;}
 div.body_content_right.events {min-height:817px;}
 div.body_content_right.event_single {min-height:1116px;}
-div.body_content_right.features {min-height:1063px;}
+div.body_content_right.features {min-height:1063px; padding:6px 0 50px 0;}
+
 div.body_content_right div.twitter {float:right; width:304px;}
 div.body_content_right div.twitter div.top {float:left; width:304px; height:15px; background:url(/images/round/top_grey_opaque_short.png) no-repeat center 0;}
 div.body_content_right div.twitter div.middle {float:left; width:234px; padding:0 35px; height:auto; background:url(/images/round/middle_grey_opaque_short.png) repeat-y center 0;}
@@ -240,7 +243,7 @@ div.body_content_left div ul#events li div.right h2 a:hover {text-decoration:und
 div.body_content_left div ul#events li div.right p.location {float:left; width:100%; font:normal 13px Arial; color:#999999; padding:0 0 13px 0;}
 div.body_content_left div ul#events li div.right p {float:left; width:100%; font:normal 13px Arial; color:#444444;}
 
-div.body_content_right {float:right; width:304px; padding:0px 0 50px 0;}
+div.body_content_right {float:right; width:304px; padding:6px 0 50px 0;}
 div.body_content_right div.opaque {position:relative; float:right; width:304px;}
 div.body_content_right div.opaque div.top {float:left; width:304px; height:15px; background:url(/images/round/top_grey_opaque_short.png) no-repeat center 0;}
 div.body_content_right div.opaque div.middle {float:left; width:234px; padding:0 35px; height:auto; background:url(/images/round/middle_grey_opaque_short.png) repeat-y center 0;}
@@ -255,7 +258,6 @@ div.body_content_right div.opaque div.loader img {position:absolute; height:16px
 
 
 /* EVENT */
-
 div.head_event div.top {float:left; width:100%; height:15px; background:url(/images/round/top_orange.png) no-repeat 0 0; margin:0;}
 div.head_event div.middle {position:relative; float:left; width:553px; padding:20px 40px 30px 40px; height:auto; background:url(/images/round/middle_orange.png) repeat-y 0 0;}
 div.head_event div.middle p.back {float:left; width:600px; padding:0 0 0 9px; background:url(/images/icons/white_left_arrow.png) no-repeat 0 4px; text-shadow:none;}
@@ -280,7 +282,7 @@ div.middle_white.events ul li div.left p.month {float:left; width:100%; text-ali
 div.middle_white.resume a.visit {float:left; width:144px; height:16px; margin:20px 0 0 0; padding:6px 0; text-align:center; font:bold 13px Arial; color:#666666; text-shadow:0 1px white; background:url(/images/events/visit_official.png) no-repeat 0 0; text-decoration:none;}
 div.middle_white.resume a.visit:hover {background-position:0 -28px;}
 div.middle_white.resume span.line {position:absolute; height:1px; width:615px; bottom:0; left:9px; background:#E5E5E5;}
-div.middle_white h6 {float:left; margin:15px 0 0 0; width:100%; font:bold 17px Arial; color:#666666;}
+div.middle_white h6 {float:left; margin:10px 0 0 0; width:100%; font:bold 17px Arial; color:#666666;}
 div.middle_white ul {float:left; width:100%; margin:30px 0 0 0; padding:0;}
 div.middle_white ul li {float:left; width:265px; padding:0;}
 div.middle_white ul li a {text-decoration:none;}
@@ -300,14 +302,17 @@ div.body_content_right div.opaque div.middle div.head p a:hover {text-decoration
 
 
 /* SITE */
-div.head_site div.top {float:left; width:100%; height:15px; background:url(/images/round/top_orange.png) no-repeat 0 0; margin:35px 0 0 0;}
+div.head_site div.top {float:left; width:100%; height:15px; background:url(/images/round/top_orange.png) no-repeat 0 0; margin:0;}
 div.head_site div.middle {position:relative; float:left; width:553px; padding:20px 40px 30px 40px; height:auto; background:url(/images/round/middle_orange.png) repeat-y 0 0;}
+div.head_site div.middle div.submitted {position:absolute; right:2px; top:-16px; width:91px; height:91px; padding:0; background:url(/images/explore/submitted.png) repeat-y 0 0; z-index:10;}
+div.head_site div.middle div.preliminary {position:absolute; right:2px; top:-16px; width:91px; height:91px; padding:0; background:url(/images/explore/preliminary.png) repeat-y 0 0; z-index:10;}
 div.head_site div.middle h1 {float:left; float:left; width:100%; font:bold 29px Arial; color:white; padding:0; letter-spacing:-1px; text-shadow:0px 1px #B24B1D;}
 div.head_site div.middle p {float:left; width:auto; padding:0 0 0 8px; font:normal 15px Arial; color:white; text-shadow:0 -1px #B24B1D;}
 div.head_site div.middle p.empty_country {padding:0;}
 div.head_site div.middle p.first {background:url(/images/icons/orange_tiny_arrow.jpg) no-repeat right 7px; padding:0 12px 0 0;}
-div.head_site div.middle span.line {position:absolute; height:1px; width:615px; bottom:0; left:9px; background:#BF4C00;}
+div.head_site div.middle span.line {position:absolute; height:1px; width:615px; bottom:0; left:9px; background:#CCCCCC;}
 div.middle_white {float:left; width:553px; padding:30px 40px 30px 40px; height:auto; background:url(/images/round/middle_white.png) repeat-y 0 0; font:normal 15px Arial; color:#666666;}
+div.middle_white h2 {float:left; width:100%; font:bold 21px Arial; color:#333333; padding:15px 0; letter-spacing:-1px;}
 div.middle.image {float:left; width:615px; padding:0 9px 0 9px; height:auto; background:url(/images/round/middle_white.png) repeat-y 0 0; font:normal 15px Arial; color:#666666; position:relative;}
 div.middle.image div.line {width:617px; position:absolute; bottom:-1px; left:7px; height:1px; background:url('../images/common/line_bottom.png') no-repeat 0 0;}
 
@@ -343,7 +348,7 @@ div.bottom.site p {float:left; width:auto; font:normal 13px Arial; color:#666666
 div.bottom.site a {float:right; margin:20px 30px 0 0; font:bold 15px Arial; color:#666666; text-shadow:0 1px white; padding:9px 0 8px 45px; width:152px; height:17px; text-align:left; background:url(/images/site/edit_button.png) no-repeat 0 0; text-decoration:none;}
 div.bottom.site a:hover {background-position:0 -34px; color:#555555;}
 
-div.opaque.site {float:left; margin:35px 0 0 0;}
+div.opaque.site {float:left; margin:6px 0 0 0;}
 div.opaque div.middle_map {float:left; width:244px; padding:0 30px; height:auto; background:url(/images/round/middle_grey_opaque_short.png) repeat-y center 0;}
 div.opaque div.middle_map div.outer_map {float:left; width:228px; height:174px; padding:7px; background:url(/images/site/map_shadow.png) no-repeat 0 0;}
 div.opaque div.middle_map div#map {float:left; width:100%; height:100%; background:white;}
@@ -352,6 +357,9 @@ div.opaque div.middle_site h6 {float:left; width:100%; padding:15px 0 0 0; font:
 div.opaque div.middle_site p {float:left; width:100%; font:normal 15px Arial; color:white; padding:2px 0 0 0;}
 div.opaque div.middle_site p a {border-bottom:1px dotted white; color:white; text-decoration:none;}
 div.opaque div.middle_site p a:hover {border-bottom:1px solid white;}
+div.opaque div.middle_site ul {float:left; width:100%; margin:0; padding:0;}
+div.opaque div.middle_site ul li {float:left; width:265px; padding:0; font:normal 15px Arial; color:#FFCC00; text-decoration:none;}
+div.opaque div.middle_site ul li a {text-decoration:none;}
 div.opaque div.bottom_site {float:left; width:304px; height:50px; background:url(/images/round/bottom_grey_opaque_short_2.png) no-repeat center 0;}
 div.opaque div.bottom_site p {float:left; width:auto; margin:17px 0 0 35px; text-align:left; font:normal 13px Arial; color:white; text-decoration:none;}
 div.opaque div.bottom_site p a {color:#FFCC00; text-decoration:none;}
@@ -414,7 +422,7 @@ div.middle_explore div.head_explore div.right {float:right; width:auto; width:10
 div.middle_explore div.head_explore div.right p {float:right; margin:5px 0 0 0;}
 div.middle_explore div.head_explore div.right p a {text-decoration:underline; color:#FFCC00; font:normal 13px Arial;}
 div.middle_explore div.head_explore div.right p a:hover {color:#FFCC00; text-decoration:none;}
-div.middle_explore div.head_explore span.line {position:absolute; height:1px; width:615px; bottom:0; left:-31px; background:#E5E5E5;}
+div.middle_explore div.head_explore span.line {position:absolute; height:1px; width:615px; bottom:0; left:-31px; background:#CCCCCC;}
 div.middle_explore ul#site_list {float:left; width:100%; padding:0; margin:0;}
 div.middle_explore ul#site_list li {float:left; width:100%; border-bottom:1px solid #E5E5E5; padding:25px 0 19px;}
 div.middle_explore ul#site_list li.last {border:none;}
@@ -446,7 +454,6 @@ div.bottom_white a {display:none;}
 
 
 div.opaque_explore {float:right; width:304px;}
-
 div.opaque_explore div.top {float:left; width:304px; height:15px; background:url(/images/round/top_short_explore.png) no-repeat center 0;}
 
 div.opaque_explore div.middle {float:left; width:234px; padding:0 35px 10px; height:auto; background:url(/images/round/middle_explore_opaque_short.png) repeat-y center 0; position:relative;}
@@ -531,9 +538,10 @@ div.error_title div.inner_title a.go_home_bttn:hover {background-position:0 -56p
 
 
 /* FOOTER */
-#footer {float:left; width:100%; height:180px; padding:30px 0 0 0; background:transparent; z-index:10;}
+#footer {float:left; width:100%; height:142px; padding:20px 0 0 0; background:transparent; z-index:10;}
 #footer.error_page {position:absolute; bottom:5px; left:0;}
-#footer.explore {position:absolute; bottom:0; left:0; width:100%; height:180px; padding:55px 0 0 0; background:#161E27; z-index:10;}
+#footer.v2 {bottom:0px; left:0px; padding-top:200px; background:url(/images/footer/non_home_footer.png) no-repeat; z-index:10;}
+#footer.explore {position:absolute; bottom:0; left:0; width:100%; height:180px; padding:55px 0 0 0; background:#0F3944; z-index:10;} /* #161E27 */
 #footer div.inner_footer {width:955px; margin:0 auto;}
 #footer div.inner_footer div.left {float:left; width:110px;}
 #footer div.inner_footer div.left h4 {font:bold 11px Arial; color:#BFD8DA; padding:0 0 8px 0;}

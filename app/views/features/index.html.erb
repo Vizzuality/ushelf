@@ -24,11 +24,26 @@
           </div>
           <div class="right">
             <ul class="menu">
-              <li><a <%= (action_name=='home') ? "class='pressed'" : '' %> href="/"><span class="cufon_museo_slab">HOME</span></a></li>
-              <li><a <%= (controller_name=='features')? "class='pressed'" : '' %> href="/explore"><span class="cufon_museo_slab">EXPLORE</span></a></li>
-              <li><a <%= ((controller_name=='events')&&(action_name=='index')) ? "class='pressed'" : '' %> href="/events"><span class="cufon_museo_slab">EVENTS</span></a></li>
-              <li><a <%= ((controller_name=='posts')&&(action_name=='index')) ? "class='pressed'" : '' %> href="/blog"><span class="cufon_museo_slab">BLOG</span></a></li>
-              <li><a <%= ((controller_name=='about')&&(action_name=='show')) ? "class='pressed'" : '' %> href="/about"><span class="cufon_museo_slab">ABOUT</span></a></li>
+              <li>
+            <a <%= (controller_name=='home') ? "class='pressed'" : '' %> href="/">
+            <span class="cufon_museo_slab">HOME</span></a>
+            </li>
+                  <li>
+            <a <%= (controller_name=='features')? "class='pressed'" : '' %> href="/explore">
+              <span class="cufon_museo_slab">EXPLORE</span></a>
+            </li>
+                  <li>
+            <a <%= ((controller_name=='events')&&(action_name=='index'))||((controller_name=='events')&&(action_name=='show')) ? "class='pressed'" : '' %> href="/events">
+            <span class="cufon_museo_slab">EVENTS</span></a>
+            </li>
+                  <li>
+            <a <%= ((controller_name=='posts')&&(action_name=='index'))||((controller_name=='posts')&&(action_name=='show'))||(controller_name=='categories') ? "class='pressed'" : '' %> href="/blog">
+            <span class="cufon_museo_slab">BLOG</span></a>
+            </li>
+                  <li>
+            <a <%= ((controller_name=='pages')&&(action_name=='show')) ? "class='pressed'" : '' %> href="/about">
+            <span class="cufon_museo_slab">ABOUT</span></a>
+          </li>
             </ul>
           </div>
         </div>
@@ -119,7 +134,7 @@
         <div class="top"></div>
         <div class="middle">
           <img id="loading" src="/images/explore/loading.gif" title="loading" alt="loading"/>
-          <h3>Filter sites</h3>
+          <h3>Filter submissions</h3>
           <form action="javascript:void getSites()">
             <label>SEARCH BY NAME / COUNTRY</label>
             <div class="first_value">

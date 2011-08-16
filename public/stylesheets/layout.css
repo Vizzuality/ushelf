@@ -3,8 +3,11 @@ img,fieldset{border:none; padding:0; margin:0;}
 ul {list-style:none;}
 a {text-decoration:underline;}
 
-body.background_v1 {float:left; background:url(/images/backgrounds/home_bg.png) no-repeat center 0 #114A58;}
-body.background_v2 {float:left; background:url(/images/backgrounds/non_home_bg.png) no-repeat center 0 #0F4655;}
+body.background_v1 {float:left; background:url('/images/backgrounds/home_bg.png') no-repeat center 0 #114A58;}
+body.background_v2 {float:left; background:url('/images/backgrounds/non_home_bg.png') no-repeat center 0 #0F4655;}
+body.error_notfound {background:url('/images/backgrounds/home_bg.png') no-repeat center 0 #114A58;}
+body.error_server {background:url('/images/backgrounds/home_bg.png') no-repeat center 0 #114A58;}
+
 /*#ADC2C4*/
 
 input:focus {outline:none;}
@@ -131,7 +134,7 @@ div.body_content_right.events {min-height:817px;}
 div.body_content_right.event_single {min-height:1116px;}
 div.body_content_right.features {min-height:1063px; padding:0px 0 50px 0;}
 
-div.body_content_right div.twitter {float:right; width:304px;}
+div.body_content_right div.twitter {float:right; width:304px; padding:6px 0 0 0;}
 div.body_content_right div.twitter div.top {float:left; width:304px; height:15px; background:url(/images/round/top_grey_opaque_short.png) no-repeat center 0;}
 div.body_content_right div.twitter div.middle {float:left; width:234px; padding:0 35px; height:auto; background:url(/images/round/middle_grey_opaque_short.png) repeat-y center 0;}
 div.body_content_right div.twitter div.middle div.head {position:relative; float:left; width:100%; padding:0; height:86px;}
@@ -170,7 +173,7 @@ div.body_content_right div.news div.bottom p {float:right; margin:20px 33px 0 0;
 div.body_content_right div.news div.bottom p a {text-decoration:none; color:#FFCC00; font:normal 15px Arial;}
 div.body_content_right div.news div.bottom p a:hover {text-decoration:underline;}
 
-div.body_content_right div.categories {float:right; width:304px;}
+div.body_content_right div.categories {float:right; width:304px; margin-top:0px;}
 div.body_content_right div.categories div.top {float:right; width:304px; height:15px; background:url(/images/round/top_white_short.png) no-repeat center 0;}
 div.body_content_right div.categories div.middle {float:right; width:234px; padding:0 35px; height:auto; background:url(/images/round/middle_white_short.png) repeat-y center 0;}
 div.body_content_right div.categories div.middle div.head {position:relative; float:left; width:100%; padding:15px 0 22px 0;}
@@ -243,7 +246,7 @@ div.body_content_left div ul#events li div.right h2 a:hover {text-decoration:und
 div.body_content_left div ul#events li div.right p.location {float:left; width:100%; font:normal 13px Arial; color:#999999; padding:0 0 13px 0;}
 div.body_content_left div ul#events li div.right p {float:left; width:100%; font:normal 13px Arial; color:#444444;}
 
-div.body_content_right {float:right; width:304px; padding:6px 0 50px 0;}
+div.body_content_right.events {float:right; width:304px; padding:6px 0 50px 0;}
 div.body_content_right div.opaque {position:relative; float:right; width:304px;}
 div.body_content_right div.opaque div.top {float:left; width:304px; height:15px; background:url(/images/round/top_grey_opaque_short.png) no-repeat center 0;}
 div.body_content_right div.opaque div.middle {float:left; width:234px; padding:0 35px; height:auto; background:url(/images/round/middle_grey_opaque_short.png) repeat-y center 0;}
@@ -453,7 +456,7 @@ div.bottom_explore a.next:hover {color:#FF3300; background-position:right -12px;
 div.bottom_white a {display:none;}
 
 
-div.opaque_explore {float:right; width:304px;}
+div.opaque_explore {float:right; width:304px; padding:6px 0 0 0;}
 div.opaque_explore div.top {float:left; width:304px; height:15px; background:url(/images/round/top_short_explore.png) no-repeat center 0;}
 
 div.opaque_explore div.middle {float:left; width:234px; padding:0 35px 10px; height:auto; background:url(/images/round/middle_explore_opaque_short.png) repeat-y center 0; position:relative;}
@@ -531,8 +534,8 @@ div.error_title.other {min-height:700px;}
 div.error_title.other div.inner_title {width:913px; margin:0 auto; padding:50px 0 0 35px; height:700px;}
 
 div.error_title div.inner_title {width:913px; margin:0 auto; padding:50px 0 0 35px; height:800px;}
-div.error_title div.inner_title h1 {float:left; padding:60px 0 0 0; width:100%; font:bold 55px Arial; color:#283F49; letter-spacing:-3px; text-shadow:2px 2px rgba(0, 11, 36, 0.3); line-height:54px;}
-div.error_title div.inner_title h3 {float:left; padding:15px 0 40px 0; width:100%; font:bold 25px Arial; color:#207D8A; letter-spacing:-1px; text-shadow:1px 1px rgba(0, 11, 36, 0.3);}
+div.error_title div.inner_title h1 {float:left; padding:60px 0 0 0; width:100%; font:bold 55px Arial; color:#F4D600; letter-spacing:-3px; text-shadow:2px 2px rgba(0, 11, 36, 0.3); line-height:54px;} /* #283F49 */
+div.error_title div.inner_title h3 {float:left; padding:15px 0 40px 0; width:100%; font:bold 25px Arial; color:#C5DFE0; letter-spacing:-1px; text-shadow:1px 1px rgba(0, 11, 36, 0.3);} /* #207D8A */
 div.error_title div.inner_title a.go_home_bttn {float:left; width:185px; height:42px; background:url(/images/error/go_home_bttn.png) no-repeat 0 0; font:bold 17px Arial; color:white; text-shadow:0px -1px #000000; text-decoration:none; text-align:center; padding:14px 0 0 0; line-height:20px;}
 div.error_title div.inner_title a.go_home_bttn:hover {background-position:0 -56px;}
 

@@ -35,21 +35,37 @@
 <% content_for :body_content_right do %>
   <div class="body_content_right">
 
-  <div class="categories">
-    <div class="top"></div>
-    <div class="middle">
-      <div class="head">
-        <h4>Categories</h4>
-        <p>News categorized</p>
-        <span class="line"></span>
+    <div class="twitter">
+      <div class="top"></div>
+      <div class="middle">
+        <div class="head">
+          <h3>Latest on twitter</h3>
+          <span class="line"></span>
+        </div>
+        <ul id="tweets_list"></ul>
       </div>
-      <ul id="categories_list">
+      <div class="bottom">
+        <a href="http://twitter.com/UNEPGRID" target="_blank">Follow us on Twitter</a>
+      </div>
+    </div>
+
+  <div class="space40"></div>
+
+
+<div class="categories">
+  <div class="top"></div>
+  <div class="middle">
+    <div class="head">
+      <h4>Categories</h4>
+      <p>News categorized</p>
+      <span class="line"></span>
+    </div>
+    <ul id="categories_list">
       <%= render :partial => "/blog/shared/categories" %>
     </ul>
-    </div>
-    <div class="bottom">
-      <p class="feed"><a href="#">subscribe to our news feed</a></p>
-    </div>
+  </div>
+  <div class="bottom">
+    <p class="feed"><a href="#">subscribe to our news feed</a></p>
   </div>
 
     <div class="space40"></div>

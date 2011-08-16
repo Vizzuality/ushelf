@@ -129,7 +129,7 @@ div.body_content_left div.bottom_posts a.next:hover {color:#FFCC00; background-p
 div.body_content_right {float:right; width:304px; padding:0px 0 50px 0;}
 div.body_content_right.events {min-height:817px;}
 div.body_content_right.event_single {min-height:1116px;}
-div.body_content_right.features {min-height:1063px; padding:6px 0 50px 0;}
+div.body_content_right.features {min-height:1063px; padding:0px 0 50px 0;}
 
 div.body_content_right div.twitter {float:right; width:304px;}
 div.body_content_right div.twitter div.top {float:left; width:304px; height:15px; background:url(/images/round/top_grey_opaque_short.png) no-repeat center 0;}

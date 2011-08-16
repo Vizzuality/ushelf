@@ -35,7 +35,9 @@
     <p><%= @feature.area %></p>
     <% end %>
 
+    <% unless @feature.description.blank? %>
     <h2>Marine Management</h2>
+    <% end %>
 
     <% unless @feature.geology_of_the_area.blank? %>
     <h4>GEOLOGY OF THE AREA</h4>
@@ -57,7 +59,9 @@
     <p><%=raw @feature.harbors_in_the_area %></p>
     <% end %>
 
+    <% unless @feature.description.blank? %>
     <h2>Marine Protected Areas (MPA)</h2>
+    <% end %>
 
     <% unless @feature.climate.blank? %>
     <h4>CLIMATE</h4>
@@ -177,4 +181,4 @@
     </div>
   </div>
 </div>
-    <%= raw javascript_include_merged :openlayer %>
+<%= raw javascript_include_merged :openlayer %>

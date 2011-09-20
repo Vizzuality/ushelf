@@ -19,21 +19,34 @@
   </div>
   <% end -%>
 
-  <div class="middle_white site">
+<div class="middle_white site">
     <% unless @feature.description.blank? %>
     <h2>Area description</h2>
     <p><%=raw @feature.description %></p>
     <% end %>
 
-    <% unless @feature.limit.blank? %>
-    <h4>WATER DEPTH</h4>
-    <p><%= @feature.limit %></p>
-    <% end %>
-
-    <% unless @feature.area.blank? %>
-    <h4>AREA</h4>
-    <p><%= @feature.area %></p>
-    <% end %>
+  <div class="essentials">
+    <div class="grey">
+      <div class="block">
+      <h4>STATUS</h4>
+      <% unless @feature.status.blank? %>
+      <p><%=raw @feature.status %></p>
+      <% end %>
+      </div>
+      <div class="block">
+      <h4>LIMIT</h4>
+      <% unless @feature.limit.blank? %>
+      <p><%= @feature.limit %></p>
+      <% end %>
+      </div>
+      <div class="block">
+      <h4>AREA</h4>
+      <% unless @feature.area.blank? %>
+      <p><%= @feature.area %></p>
+      <% end %>
+      </div>
+    </div>
+</div>
 
     <% unless @feature.description.blank? %>
     <h2>Marine Management</h2>

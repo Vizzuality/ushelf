@@ -1,5 +1,4 @@
-
-  var map;
+var map;
   var bounds;
   var markers;
   var epsg4326;
@@ -10,7 +9,7 @@
   var slider_hydrate = 404;
 
   $(document).ready(function() {
-	
+
     //Cover ul space with blue opaque background (header)
     var li_size = 0;
     $('div.inner_header ul li').each(function(index,element){
@@ -19,7 +18,7 @@
     $('div.inner_header ul').css('background-position',(704-li_size-667) + 'px 0px');
 
 	$('select').sSelect();
-	
+
     $('body').css('background-color','#99B3CC');
 
     //Text Input effects
@@ -39,7 +38,7 @@
 	$('select').change(function(ev){
       getSites();
     });
-		
+
 
 
     $("div.water").slider({range: "min",value: 5478,min: 670,max: 5478,
@@ -161,8 +160,8 @@
               '<p>'+result[i].id+'</p>'+
             '</div>'+
             '<div class="info">';
-			
-			
+
+
 			if (result[i].country == null){
 				li_+='<h2><a href="'+result[i].url+'">'+result[i].title+'</a></h2><p><span>'+result[i].limit+'</span></p>';
 			}else {
@@ -172,11 +171,11 @@
 
 			li_+='</div>'+
           '</div>';
-			
+
 			if (result[i].description != null) {
 				li_+= '<p class="des">'+result[i].description+'... <a href="'+result[i].url+'">Read more</a></p>';
 			}
-			
+
             li_+='<div class="grey">'+
             '<div class="block">'+
               '<h4>SUBMISSION STATUS</h4>'+
@@ -207,21 +206,21 @@
 			$('div.bottom_white').addClass('bottom_explore');
 			$('div.bottom_explore').removeClass('bottom_white');
 		}
-		
+
 		if (result.prev_page_url!=null) {
 			$('#prev_button').show();
 			$('#prev_button').attr('href',result.prev_page_url);
 		} else {
 			$('#prev_button').hide();
 		}
-		
+
 		if (result.next_page_url!=null) {
 			$('#next_button').show();
 			$('#next_button').attr('href',result.next_page_url);
 		} else {
 			$('#next_button').hide();
 		}
-		
+
 	}
 
 
@@ -242,7 +241,7 @@
 
 
   function placeFooter() {
-	
+
 	// 481 is the min distance necessary
 	var footerPos = parseInt($('div.body_content_left').height()) + 481;
 	$('#footer').css('top',footerPos+'px');
@@ -279,7 +278,7 @@
     reset = true;
     $('div.water').slider( "value" , 5478 );
     $('div.hydrate').slider( "value" , 404 );
-	
+
 	$('input#name_country').val('');	
 	$('div.opaque_explore div.middle form ul.newList li').first().children('a').trigger('click.sSelect');
   }

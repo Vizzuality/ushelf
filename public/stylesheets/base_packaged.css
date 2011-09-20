@@ -299,6 +299,10 @@ div.middle_white.site h3 {float:left; width:100%; font:bold 21px Arial; color:#3
 div.middle_white.site p {float:left; width:100%; font:normal 13px Arial; color:#666666; line-height:17px;}
 div.middle_white.site p a {font:normal 13px Arial; color:#FFCC00; text-decoration:none;}
 div.middle_white.site p a:hover {text-decoration:underline;}
+div.middle_white.site div.essentials div.grey {float:left; width:100%; background:url(/images/explore/grey_bkg.png) repeat-y 0 0; margin:15px 0;}
+div.middle_white.site div.essentials div.grey div.block {float:left; width:160px; padding:12px;}
+div.middle_white.site div.essentials div.grey div.block h4 {float:left; width:100%; font:bold 11px Arial; color:#A9A9A9;}
+div.middle_white.site div.essentials div.grey div.block p {float:left; width:100%; padding:5px 0 0 0; font:normal 13px Arial; color:#666666;}
 div.middle_white p {float:left; width:100%; font:normal 15px Arial; color:#666666; line-height:19px;}
 div.bottom.site {float:left; width:633px; height:85px; background:url(/images/round/bottom_grey.png) no-repeat 0 0;}
 div.bottom.site p {float:left; width:auto; font:normal 13px Arial; color:#666666; text-shadow:0 1px white; margin:28px 0 0 30px;}

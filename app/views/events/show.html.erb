@@ -1,3 +1,6 @@
+<span id="latitude" class="hidden">40</span>
+<span id="longitude" class="hidden">-3</span>
+
 <% content_for :body_content_left do %>
   <div class="body_content_left">
     <div class="event_content">
@@ -89,7 +92,7 @@
 
         <div class="calendar"></div>
         <div class="loader">
-          <img src="/images/common/activity indicator.gif" />
+          <img src="/images/common/activity_indicator.gif" />
         </div>
       </div>
       <div class="bottom"></div>
@@ -98,3 +101,5 @@
 <% end %>
 
 <%= render :partial => "/shared/content_page" %>
+
+<%= raw javascript_include_merged :openlayer %>
